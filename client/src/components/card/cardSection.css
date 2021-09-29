@@ -1,0 +1,26 @@
+.cardsection-container{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+}
+
+.card-heading{
+    color: #3f8ebf;
+  font-size: 2rem;
+  width: 100%;
+}
+.paragraph{
+  color: #6a8a9e;
+  width:70%;
+  padding: 1rem 0;
+  line-height: 1.8rem;
+}
+
+.card-right{
+  /* display: flex;
+  justify-content: flex-end; */
+  padding-left: 5rem;
+}
+.card-right img{
+  box-shadow: 0px 25px 50px rgb(60 136 176 / 55%);
+  border-radius: 20px;
+}
