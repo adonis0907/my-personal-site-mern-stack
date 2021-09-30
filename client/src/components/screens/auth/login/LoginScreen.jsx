@@ -11,7 +11,7 @@ const LoginScreen = ({history}) => {
 
   useEffect(()=>{
     if(localStorage.getItem("authToken")){
-      history.push("/")
+      history.push("/admin")
     }
   },[history])
 
@@ -28,7 +28,7 @@ const LoginScreen = ({history}) => {
     try{
        const {data}= await axios.post("/api/auth/login",{email,password},config);
        localStorage.setItem("authToken",data.token)
-       history.push("/")
+       history.push("/admin")
     }catch(error){
       setError(error.response.data.error)
         setTimeout(()=>{
@@ -36,33 +36,43 @@ const LoginScreen = ({history}) => {
         },5000)
     }
   }
+
+
+
   return (
-    <div className="login-screen">
+    <>
+    <div className="login-container">
+    <div className="align " id="login2">
 
-    <form onSubmit={loginHandler} className="login-screen_form">
-      <h3 className="login-screen_title">Login</h3>
-      {error && <span className="error-message">{error}</span>}
+        <div class="login-box">
 
+          <h2>Login</h2>
+          {error && <span className="error-message">{error}</span>}
 
-      <div className="form-group">
-        <label htmlFor="email">Email:</label>
-        <input type="email" required id="email" placeholder="Enter email" value={email} onChange={(e) =>setEmail(e.target.value)} tabIndex={1}/>
+          <form onSubmit={loginHandler} >
+            <div class="user-box">
+                <input type="email" id="email" required=""  value={email} onChange={(e) =>setEmail(e.target.value)} tabIndex={1}/>
+                <label htmlFor="email">Email</label>
+            </div>
+            <div class="user-box">
+              <input type="password" id="password" required="" value={password} onChange={(e) =>setPassword(e.target.value)} tabIndex={2} />
+              <label htmlFor="password">Password</label>
+            </div>
+            <button type="submit" className="submit-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </button>
+            <span className="login-subtext">Don't have an account? <b className="register-link"  ><Link to='/register' className="link">Register</Link></b></span>
+        </form>
       </div>
-
-      <div className="form-group">
-        <label htmlFor="password">Password:<Link to="/forgotpassword" className="login-screen_forgotpassword" tapIndex={4}>Forgot Password?</Link></label>
-        <input type="password" required id="password" placeholder="Enter Password" value={password} onChange={(e) =>setPassword(e.target.value)} tabIndex={2}/>
-      </div>
+  </div>
+  </div>
 
 
-      <button type="submit" className="btn btn-primary" tabIndex={3}>Login</button>
-
-      <span className="login-screen_subtext">Don't have an account? <Link to="/register">Register</Link></span>
-    </form>
-
-
-
-    </div>
+    </>
   )
 }
 

@@ -12,15 +12,15 @@ const App=()=> {
     <Router>
       <div className='App'>
         <Switch>
-            <PrivateRoute exact path="/" component={PrivateScreen}/>
+            <PrivateRoute exact path="/private" component={PrivateScreen}/>
             <PrivateRoute exact path="/admin" component={PrivateScreen}/>
-            <Route exact path="/home" component={LandingPage}/>
+            <Route exact path="/" component={LandingPage}/>
             <Route exact path="/login" component={LoginScreen}/>
             <Route exact path="/register" component={RegisterScreen}/>
             <Route exact path="/forgotpassword" component={ForgotPasswordScreen}/>
             <Route exact path="/passwordreset/:resetToken" component={ResetPasswordScreen}/>
         </Switch>
-      </div> 
+      </div>
     </Router>
   );
 }
