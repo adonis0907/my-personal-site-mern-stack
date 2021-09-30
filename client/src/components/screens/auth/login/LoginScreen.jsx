@@ -51,12 +51,12 @@ const LoginScreen = ({history}) => {
 
           <form onSubmit={loginHandler} >
             <div class="user-box">
-                <input type="text" name="" required=""  value={email} onChange={(e) =>setEmail(e.target.value)} tabIndex={1}/>
-                <label>Email</label>
+                <input type="email" id="email" required=""  value={email} onChange={(e) =>setEmail(e.target.value)} tabIndex={1}/>
+                <label htmlFor="email">Email</label>
             </div>
             <div class="user-box">
-              <input type="password" name="" required="" value={password} onChange={(e) =>setPassword(e.target.value)} tabIndex={2} />
-              <label>Password</label>
+              <input type="password" id="password" required="" value={password} onChange={(e) =>setPassword(e.target.value)} tabIndex={2} />
+              <label htmlFor="password">Password</label>
             </div>
             <button type="submit" className="submit-btn">
               <span></span>
