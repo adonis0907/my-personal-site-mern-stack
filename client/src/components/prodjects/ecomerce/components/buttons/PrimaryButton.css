@@ -1,0 +1,18 @@
+.ecom__btn{
+  margin-top: 1rem;
+  display: block;
+  padding: 1rem 8rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+.ecom__btn:hover{
+  background: var(--orange);
+  color: var(--white);
+  transition: .4s;
+}

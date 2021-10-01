@@ -1,0 +1,197 @@
+.ecom__header{
+  position: fixed;
+  top:0;left: 0;right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.ecom__header .ecom__logo{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.ecom__header .ecom__logo svg{
+  color: var(--orange);
+}
+.ecom__header a{
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+.ecom__header a:hover{
+  color: var(--orange);
+}
+
+.ecom__header .ecom__icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecom__header .ecom__icons div{
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: .5rem;
+  background: #eee;
+  color:var(--black);
+  font-size: 1rem;
+  margin-right: .3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.ecom__header .ecom__icons div:hover{
+  background: var(--orange);
+  color:var(--white);
+}
+
+#ecom__menu-btn{
+  display: none;
+}
+
+.ecom__header .ecom__search-form{
+  position: absolute;
+  top:110%;right: -110%;
+  width: 27rem;
+  height: 2.5rem;
+  background: var(--white);
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.ecom__header .ecom__search-form.ecom__active{
+  right: 2rem;
+  transition: .4s linear;
+
+}
+
+.ecom__header .ecom__search-form input{
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1rem;
+  color:var(--black);
+  padding: 0 1.5rem;
+  border: none;
+}
+
+.ecom__header .ecom__search-form label{
+  font-size: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+  transition: .4s;
+  padding:0 1rem;
+}
+
+.ecom__header .ecom__search-form label:hover{
+    color: var(--orange);
+
+}
+
+.ecom__header .ecom__shopping-card{
+position: absolute;
+top:110%;right: -110%;
+
+padding:1rem;
+border-radius: .5rem;
+box-shadow: var(--box-shadow);
+width: 25rem;
+background: var(--white);
+}
+.ecom__header .ecom__shopping-card.ecom__active{
+  right: 2rem;
+  transition: .4s linear;
+}
+
+.ecom__header .ecom__shopping-card .ecom__total{
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--black);
+}
+
+.ecom__submit-btn{
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+.ecom__submit-btn:hover{
+  background: var(--orange);
+  color: var(--white);
+  transition: .4s;
+}
+
+.ecom__header .ecom__login-from{
+  position: absolute;
+  top:110%;right: -110%;
+  width: 24rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: .5rem;
+  background: var(--white);
+  text-align: center;
+}
+.ecom__header .ecom__login-from.ecom__active{
+  right:2rem;
+  transition: .4s linear;
+}
+
+.ecom__header .ecom__login-from h3{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.ecom__header .ecom__login-from .ecom__box{
+  width: 100%;
+  margin: .7rem 0;
+  background: #eee;
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  color: var(--black);
+  text-transform: none;
+
+}
+.ecom__header .ecom__login-from input{
+  /* background: none; */
+  border: .5px solid var(--black);
+}
+.ecom__header .ecom__login-from p{
+  font-size: 1rem;
+  padding: .5rem 0;
+  color: var(--light-color);
+
+}
+
+.ecom__header .ecom__login-from p a{
+  color: var(--orange);
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+/* media Queries*/
+@media (max-width:991px) {
+
+}

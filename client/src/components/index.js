@@ -9,3 +9,5 @@ export {default as ForgotPasswordScreen} from './screens/auth/forgotpassword/For
 export {default as ResetPasswordScreen} from './screens/auth/resetpassword/ResetPasswordScreen';
 // pages
 export {default as LandingPage} from './pages/landingPage/LandingPage';
+// prodjects
+export {default as EcomerceSite} from './prodjects/ecomerce/EcomerceSite';

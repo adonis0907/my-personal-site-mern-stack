@@ -1,0 +1,39 @@
+.ecom__box{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+  position: relative;
+  margin: .5rem 0;
+}
+.ecom__box img{
+  height: 10rem;
+
+}
+.ecom__box svg{
+  font-size: 1.3rem;
+  position: absolute;
+
+  top:50%;right: 2rem;
+  cursor: pointer;
+  color: var(--light-color);
+  transform: translateY(-50%);
+  transition: .4s;
+}
+.ecom__box svg:hover{
+  color: var(--orange);
+}
+
+.ecom__box .ecom__content h3{
+  color: var(--black);
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.ecom__box .ecom__content span{
+  color: var(--light-color);
+  font-size: 1rem;
+}
+
+.ecom__box .ecom__content .ecom__quantity{
+  padding-left: 1rem;
+}

@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import './header.css'
 import PrimaryButton from '../buttons/PrimaryButton'
-
+import {Link} from 'react-router-dom'
 
 const Header = ({handlePopUp}) => {
   const [show, handleShow]=useState(false);
@@ -41,7 +41,7 @@ const Header = ({handlePopUp}) => {
 
         <div className="navbar-right">
           <a href="#home">Home</a>
-          <a href="#interview_prep">Interview Prep</a>
+          <Link to="/ecomerce">prodjects</Link>
           <a href="#">Porfolio</a>
           <a href="#">Contact</a>
           <PrimaryButton onClick={handlePopUp} name={"Dashbourd"}/>
