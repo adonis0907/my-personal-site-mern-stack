@@ -29,6 +29,33 @@ html{
   scroll-padding-top:7rem;
   background: #eee;
 }
+section{
+  padding: 2rem 9%;
+}
+.ecom__box-container{
+  /* width:100%; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  gap:1.5rem;
+
+}
+
+
+.ecom__heading{
+  text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  color: var(--black);
+
+}
+.ecom__heading span{
+  background: var(--orange);
+  color: var(--white);
+  display: inline-block;
+  padding: 0 3rem;
+  clip-path:polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
 
 /* media Queries*/
 @media (max-width:991px) {

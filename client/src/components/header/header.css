@@ -33,12 +33,13 @@
 }
 
 .navbar-right{
-  float: right;
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
 .navbar-left{
-  float: left;
+  /* float: left; */
   padding-right: 20%;
   margin-left: 100px;
 }

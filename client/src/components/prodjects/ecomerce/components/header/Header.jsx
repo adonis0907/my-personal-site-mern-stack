@@ -29,26 +29,48 @@ const Header = () => {
   function ecom__searchMenu(){
 
       ecom__searchForm.classList.toggle('ecom__active')
-      ecom__cardForm.classList.remove('ecom__active')
-      ecom__navbar.classList.remove('ecom__active')
-      ecom__cardForm2.classList.remove('ecom__active')
+      if(ecom__cardForm.classList[1]==='ecom__active'){
+        ecom__cardForm.classList.remove('ecom__active')
+      }
+      if(ecom__navbar.classList[1]==='ecom__active'){
+        ecom__navbar.classList.remove('ecom__active')
+      }
+      if(ecom__cardForm2.classList[1]==='ecom__active'){
+        ecom__cardForm2.classList.remove('ecom__active')
+      }
+
+
+
 
   }
 
   function ecom__cardMenu(){
 
       ecom__cardForm.classList.toggle('ecom__active')
-      ecom__searchForm.classList.remove('ecom__active')
-      ecom__navbar.classList.remove('ecom__active')
-      ecom__cardForm2.classList.remove('ecom__active')
+      if(ecom__searchForm.classList[1]==='ecom__active'){
+        ecom__searchForm.classList.remove('ecom__active')
+      }
+      if(ecom__navbar.classList[1]==='ecom__active'){
+        ecom__navbar.classList.remove('ecom__active')
+      }
+      if(ecom__cardForm2.classList[1]==='ecom__active'){
+        ecom__cardForm2.classList.remove('ecom__active')
+      }
+
 
   }
   function ecom__loginForm(){
 
       ecom__cardForm2.classList.toggle('ecom__active')
-      ecom__searchForm.classList.remove('ecom__active')
-      ecom__cardForm.classList.remove('ecom__active')
-      ecom__navbar.classList.remove('ecom__active')
+      if(ecom__searchForm.classList[1]==='ecom__active'){
+        ecom__searchForm.classList.remove('ecom__active')
+      }
+      if(ecom__navbar.classList[1]==='ecom__active'){
+        ecom__navbar.classList.remove('ecom__active')
+      }
+      if(ecom__cardForm.classList[1]==='ecom__active'){
+        ecom__cardForm.classList.remove('ecom__active')
+      }
 
 
   }
@@ -62,12 +84,21 @@ const Header = () => {
       ecom__cardForm2.classList.remove('ecom__active')
 
   }
-  window.onscroll=()=>{
-    ecom__searchForm.classList.remove('ecom__active')
-    ecom__cardForm.classList.remove('ecom__active')
-    ecom__navbar.classList.remove('ecom__active')
-    ecom__cardForm2.classList.remove('ecom__active')
-  }
+  // window.onscroll=()=>{
+  //
+  //   if(ecom__searchForm.classList[1]!==undefined && ecom__searchForm.classList[1]==='ecom__active'){
+  //     ecom__searchForm.classList.remove('ecom__active')
+  //   }
+  //   if(ecom__navbar.classList[1]!==undefined && ecom__navbar.classList[1]==='ecom__active'){
+  //     ecom__navbar.classList.remove('ecom__active')
+  //   }
+  //   if(ecom__cardForm.classList[1]!==undefined && ecom__cardForm.classList[1]==='ecom__active'){
+  //     ecom__cardForm.classList.remove('ecom__active')
+  //   }
+  //   if(ecom__cardForm2.classList[1]!==undefined && ecom__cardForm2.classList[1]==='ecom__active'){
+  //     ecom__cardForm2.classList.remove('ecom__active')
+  //   }
+  // }
 
   return (
     <header className="ecom__header">

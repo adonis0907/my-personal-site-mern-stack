@@ -1,0 +1,53 @@
+.ecom__home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./banner-bg.webp) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 17rem;
+  padding-bottom: 10rem;
+}
+.ecom__home .ecom__content{
+  text-align: center;
+  width: 60rem;
+}
+.ecom__home .ecom__content h3{
+  color:var(--black);
+  font-size: 3rem;
+
+}
+
+.ecom__home .ecom__content P{
+  color:var(--light-color);
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  line-height: 1.8;
+
+}
+
+.ecom__home .ecom__content h3 span{
+  color:var(--orange);
+
+
+}
+.ecom__home .ecom__content .ecom__home-btn{
+
+  width: 200px;
+  margin-top: 1rem;
+
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+.ecom__home .ecom__content .ecom__home-btn:hover{
+  background: var(--orange);
+  color: var(--white);
+  transition: .4s;
+}

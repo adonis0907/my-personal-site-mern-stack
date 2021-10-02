@@ -1,6 +1,9 @@
 import React from 'react'
 import './ecomercesite.css'
 import Header from './components/header/Header'
+import Home from './components/home/Home'
+import Feature from './components/feature/Feature'
+import Product from './components/product/Product'
 const EcomerceSite = () => {
   return (
     <div className="ecomerce-body">
@@ -8,7 +11,19 @@ const EcomerceSite = () => {
       <Header />
     {/*header component ends*/}
 
-  
+    {/*home component starts*/}
+      <Home />
+    {/*home component ends*/}
+
+    {/*features component starts*/}
+    <Feature />
+    {/*features component ends*/}
+
+    {/*products component start*/}
+    <Product/>
+    {/*products component ends*/}
+
+
 
     </div>
   )

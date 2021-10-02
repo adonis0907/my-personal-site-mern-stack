@@ -58,7 +58,7 @@ const LandingPage = ({history}) => {
                   <span></span>
                 </div>
           {/*this is where the gradient ends*/}
-
+          <div className="content-container">
           {/*this is where the text container starts*/}
                 <div className="left-content">
                     <div className="text">
@@ -83,8 +83,12 @@ const LandingPage = ({history}) => {
                     </div>
                 </div>
           {/*image container showing dashboard ends*/}
+          </div>
         </div>
-      <Layout handlePopUp={handlePopUp}/>
+        <div className="layout-container-content">
+            <Layout handlePopUp={handlePopUp}/>
+        </div>
+
     </div>
     {/* body equivalent to  body tag end*/}
 
