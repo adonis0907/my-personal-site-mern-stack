@@ -21,24 +21,52 @@ import {
 
 
 const Header = () => {
+  let ecom__cardForm=document.querySelector('.ecom__shopping-card');
+  let ecom__cardForm2=document.querySelector('.ecom__login-from');
+  let ecom__navbar=document.querySelector('.ecom__navbar');
+  let ecom__searchForm=document.querySelector('.ecom__search-form');
+
   function ecom__searchMenu(){
-    let ecom__searchForm=document.querySelector('.ecom__search-form');
 
       ecom__searchForm.classList.toggle('ecom__active')
+      ecom__cardForm.classList.remove('ecom__active')
+      ecom__navbar.classList.remove('ecom__active')
+      ecom__cardForm2.classList.remove('ecom__active')
 
   }
 
   function ecom__cardMenu(){
-    let ecom__cardForm=document.querySelector('.ecom__shopping-card');
 
       ecom__cardForm.classList.toggle('ecom__active')
+      ecom__searchForm.classList.remove('ecom__active')
+      ecom__navbar.classList.remove('ecom__active')
+      ecom__cardForm2.classList.remove('ecom__active')
 
   }
   function ecom__loginForm(){
-    let ecom__cardForm2=document.querySelector('.ecom__login-from');
 
       ecom__cardForm2.classList.toggle('ecom__active')
+      ecom__searchForm.classList.remove('ecom__active')
+      ecom__cardForm.classList.remove('ecom__active')
+      ecom__navbar.classList.remove('ecom__active')
 
+
+  }
+
+  function ecom__navwidow(){
+
+
+      ecom__navbar.classList.toggle('ecom__active')
+      ecom__searchForm.classList.remove('ecom__active')
+      ecom__cardForm.classList.remove('ecom__active')
+      ecom__cardForm2.classList.remove('ecom__active')
+
+  }
+  window.onscroll=()=>{
+    ecom__searchForm.classList.remove('ecom__active')
+    ecom__cardForm.classList.remove('ecom__active')
+    ecom__navbar.classList.remove('ecom__active')
+    ecom__cardForm2.classList.remove('ecom__active')
   }
 
   return (
@@ -55,7 +83,7 @@ const Header = () => {
     </nav>
 
     <div className="ecom__icons">
-      <div className="ecom__fas ecom__fa-bars" id="ecom__menu-btn"><FontAwesomeIcon icon={ faBars }/></div>
+      <div className="ecom__fas ecom__fa-bars" id="ecom__menu-btn" onClick={ecom__navwidow}><FontAwesomeIcon icon={ faBars }/></div>
       <div className="ecom__fas ecom__fa-search" id="ecom__search-btn" onClick={ecom__searchMenu}><FontAwesomeIcon icon={ faSearch }/></div>
       <div className="ecom__fas ecom__fa-shopping-card" id="ecom__card-btn" onClick={ecom__cardMenu}><FontAwesomeIcon icon={ faShoppingCart }/></div>
       <div className="ecom__fas ecom__fa-user" id="ecom__login-btn" onClick={ecom__loginForm}><FontAwesomeIcon icon={ faUser }/></div>

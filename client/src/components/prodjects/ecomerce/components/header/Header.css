@@ -88,7 +88,7 @@
 }
 
 .ecom__header .ecom__search-form label{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--black);
   cursor: pointer;
   transition: .4s;
@@ -191,7 +191,35 @@ background: var(--white);
   font-size: 1rem;
 }
 
-/* media Queries*/
 @media (max-width:991px) {
+  .ecom__header{
+    padding: 2rem;
+  }
+}
 
+@media (max-width:768px) {
+  #ecom__menu-btn{
+    display: inline-block;
+  }
+  .ecom__header .ecom__search-form{
+    width: 90%;
+    font-size: 2rem;
+  }
+  .ecom__header .ecom__navbar{
+    position: absolute;
+    top:110%;right: -110%;
+    width: 22rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background: var(--white);
+  }
+  .ecom__header .ecom__navbar.ecom__active{
+    right: 2rem;
+    transition: .4s linear;
+  }
+  .ecom__header .ecom__navbar a{
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    display: block;
+  }
 }

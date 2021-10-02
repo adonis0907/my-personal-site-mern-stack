@@ -23,7 +23,7 @@
 
 }
 html{
-  font-size: 62.5%;
+  font-size: 65.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top:7rem;
@@ -32,7 +32,7 @@ html{
 
 /* media Queries*/
 @media (max-width:991px) {
-  .ecomerce-body{
+  html{
   font-size: 55%;
   }
 }
@@ -40,7 +40,7 @@ html{
 
 /* media Queries*/
 @media (max-width:450px) {
-  .ecomerce-body{
+  html{
   font-size: 50%;
   }
 }
