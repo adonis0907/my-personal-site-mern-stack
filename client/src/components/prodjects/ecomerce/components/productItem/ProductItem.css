@@ -1,0 +1,38 @@
+.ecom__product-box{
+background: var(--white);
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shadow);
+transition: .2s linear;
+width: 34rem;
+margin:2rem;
+}
+
+.ecom__product-box:hover{
+  outline-offset: 0rem;
+  outline: var(--outline-hover);
+}
+
+.ecom__product-box img{
+    height: 20rem;
+}
+
+.ecom__product-box h3{
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.ecom__product-box .ecom__product-price{
+  font-size: 2rem;
+  color: var(--light-color);
+  padding: .5rem 0;
+}
+
+.ecom__product-box .ecom__product-stars>svg{
+  font-size: 2rem;
+  color: var(--orange);
+  padding: .5rem 0;
+}

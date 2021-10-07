@@ -1,0 +1,19 @@
+.ecom__products .ecom__product-slider{
+  padding: 1rem;
+
+}
+
+.ecom__products .ecom__product-slider:first-child{
+  margin-bottom: 2rem;
+}
+
+.ecom__product-wrapper{
+  display: flex;
+  overflow-y:hidden;
+  overflow-x: scroll;
+
+}
+
+.ecom__product-wrapper::-webkit-scrollbar{
+  display: none;
+}

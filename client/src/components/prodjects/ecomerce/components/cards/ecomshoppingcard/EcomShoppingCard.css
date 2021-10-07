@@ -9,7 +9,7 @@
   height: 10rem;
 
 }
-.ecom__box svg{
+.ecom__box>svg{
   font-size: 1.3rem;
   position: absolute;
 
@@ -19,7 +19,7 @@
   transform: translateY(-50%);
   transition: .4s;
 }
-.ecom__box svg:hover{
+.ecom__box>svg:hover{
   color: var(--orange);
 }
 

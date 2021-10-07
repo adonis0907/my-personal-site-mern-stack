@@ -28,27 +28,19 @@ const ForgotPasswordScreen = () => {
   }
   return (
     <div className="forgotpassword-screen">
-    <div class="login-box">
-      <form onSubmit={forgotPasswordHandler} >
-        <h3 >Forgot Password</h3>
+      <form onSubmit={forgotPasswordHandler} className="forgotpassword-screen_form">
+        <h3 className="forgotpassword-screen_title">Forgot Password</h3>
         {error &&<span className="error-message">{error}</span>}
         {success && <span className="success-message">{success}</span>}
-        <div className="user-box">
+        <div className="form-group">
           <p className="forgotpassword-screen_subtext">
           Please enter the email address you register your account with. We will send you reset password confirmation to this email
           </p>
-
-          <input type="email" required="" id="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-          <label >Email:</label>
+          <label htmlFor="email">Email:</label>
+          <input type="email" required id="email" placeholder="Email address" value={email} onChange={(e)=>setEmail(e.target.value)}/>
         </div>
-        <button type="submit" className="submit-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Send Email</button>
+        <button type="submit" className="btn btn-primary">Send Email</button>
       </form>
-      </div>
     </div>
   )
 }

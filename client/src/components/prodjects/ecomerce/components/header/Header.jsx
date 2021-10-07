@@ -29,15 +29,15 @@ const Header = () => {
   function ecom__searchMenu(){
 
       ecom__searchForm.classList.toggle('ecom__active')
-      if(ecom__cardForm.classList[1]==='ecom__active'){
-        ecom__cardForm.classList.remove('ecom__active')
-      }
-      if(ecom__navbar.classList[1]==='ecom__active'){
-        ecom__navbar.classList.remove('ecom__active')
-      }
-      if(ecom__cardForm2.classList[1]==='ecom__active'){
-        ecom__cardForm2.classList.remove('ecom__active')
-      }
+      // if(ecom__cardForm.classList[1]==='ecom__active'){
+      //   ecom__cardForm.classList.remove('ecom__active')
+      // }
+      // if(ecom__navbar.classList[1]==='ecom__active'){
+      //   ecom__navbar.classList.remove('ecom__active')
+      // }
+      // if(ecom__cardForm2.classList[1]==='ecom__active'){
+      //   ecom__cardForm2.classList.remove('ecom__active')
+      // }
 
 
 
@@ -47,30 +47,30 @@ const Header = () => {
   function ecom__cardMenu(){
 
       ecom__cardForm.classList.toggle('ecom__active')
-      if(ecom__searchForm.classList[1]==='ecom__active'){
-        ecom__searchForm.classList.remove('ecom__active')
-      }
-      if(ecom__navbar.classList[1]==='ecom__active'){
-        ecom__navbar.classList.remove('ecom__active')
-      }
-      if(ecom__cardForm2.classList[1]==='ecom__active'){
-        ecom__cardForm2.classList.remove('ecom__active')
-      }
+      // if(ecom__searchForm.classList[1]==='ecom__active'){
+      //   ecom__searchForm.classList.remove('ecom__active')
+      // }
+      // if(ecom__navbar.classList[1]==='ecom__active'){
+      //   ecom__navbar.classList.remove('ecom__active')
+      // }
+      // if(ecom__cardForm2.classList[1]==='ecom__active'){
+      //   ecom__cardForm2.classList.remove('ecom__active')
+      // }
 
 
   }
   function ecom__loginForm(){
 
       ecom__cardForm2.classList.toggle('ecom__active')
-      if(ecom__searchForm.classList[1]==='ecom__active'){
-        ecom__searchForm.classList.remove('ecom__active')
-      }
-      if(ecom__navbar.classList[1]==='ecom__active'){
-        ecom__navbar.classList.remove('ecom__active')
-      }
-      if(ecom__cardForm.classList[1]==='ecom__active'){
-        ecom__cardForm.classList.remove('ecom__active')
-      }
+      // if(ecom__searchForm.classList[1]==='ecom__active'){
+      //   ecom__searchForm.classList.remove('ecom__active')
+      // }
+      // if(ecom__navbar.classList[1]==='ecom__active'){
+      //   ecom__navbar.classList.remove('ecom__active')
+      // }
+      // if(ecom__cardForm.classList[1]==='ecom__active'){
+      //   ecom__cardForm.classList.remove('ecom__active')
+      // }
 
 
   }
@@ -84,21 +84,21 @@ const Header = () => {
       ecom__cardForm2.classList.remove('ecom__active')
 
   }
-  // window.onscroll=()=>{
-  //
-  //   if(ecom__searchForm.classList[1]!==undefined && ecom__searchForm.classList[1]==='ecom__active'){
-  //     ecom__searchForm.classList.remove('ecom__active')
-  //   }
-  //   if(ecom__navbar.classList[1]!==undefined && ecom__navbar.classList[1]==='ecom__active'){
-  //     ecom__navbar.classList.remove('ecom__active')
-  //   }
-  //   if(ecom__cardForm.classList[1]!==undefined && ecom__cardForm.classList[1]==='ecom__active'){
-  //     ecom__cardForm.classList.remove('ecom__active')
-  //   }
-  //   if(ecom__cardForm2.classList[1]!==undefined && ecom__cardForm2.classList[1]==='ecom__active'){
-  //     ecom__cardForm2.classList.remove('ecom__active')
-  //   }
-  // }
+  window.onscroll=()=>{
+
+    // if(ecom__searchForm.classList[1]!==null && ecom__searchForm.classList[1]==='ecom__active'){
+    //   ecom__searchForm.classList.remove('ecom__active')
+    // }
+    // if(ecom__navbar.classList[1]!==null && ecom__navbar.classList[1]==='ecom__active'){
+    //   ecom__navbar.classList.remove('ecom__active')
+    // }
+    // if(ecom__cardForm.classList[1]!==null && ecom__cardForm.classList[1]==='ecom__active'){
+    //   ecom__cardForm.classList.remove('ecom__active')
+    // }
+    // if(ecom__cardForm2.classList[1]!==null && ecom__cardForm2.classList[1]==='ecom__active'){
+    //   ecom__cardForm2.classList.remove('ecom__active')
+    // }
+  }
 
   return (
     <header className="ecom__header">
@@ -140,7 +140,6 @@ const Header = () => {
       <input type="password" placeholder="your password" className="ecom__box" />
         <p className="ecom__form-paragraph">forgot your password?<a href="#">Reset Now</a></p>
         <p className="ecom__form-paragraph">Don't have an account?<a href="#">Create Now</a></p>
-
       <input type="submit" value="login now" className="ecom__submit-btn"/>
 
     </form>

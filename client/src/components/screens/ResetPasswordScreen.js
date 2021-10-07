@@ -40,33 +40,23 @@ const ResetPasswordScreen = ({match}) => {
   }
 
   return (
-    <div className="resetpassword-container">
-    <div className="login-box">
-      <form onSubmit={resetPasswordHandler} >
+    <div className="resetpassword-screen">
+      <form onSubmit={resetPasswordHandler} className="resetpassword-screen_form">
         <h3 className="resetpassword-screen_title">Reset Password</h3>
         {error &&<span className="error-message">{error}</span>}
         {success && <span className="success-message">{success}<Link to="/login">Login</Link></span>}
-        <div className="user-box">
-
-          <input type="password" required="" id="password"  value={password} onChange={(e)=>setPassword(e.target.value)}/>
-            <label>New Password</label>
+        <div className="form-group">
+          <label htmlFor="password">New Password</label>
+          <input type="password" required id="password" placeholder="Enter new password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
         </div>
 
-        <div className="user-box">
-
-          <input type="password" required="" id="confirmpassword" value={confirmpassword} onChange={(e)=>setConfirmpassword(e.target.value)}/>
-          <label >Confirm New Password</label>
+        <div className="form-group">
+          <label htmlFor="confirmpassword">Confirm New Password</label>
+          <input type="password" required id="confirmpassword" placeholder="Confirm new password" value={confirmpassword} onChange={(e)=>setConfirmpassword(e.target.value)}/>
         </div>
 
-        <button type="submit" className="submit-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Reset Password
-        </button>
+        <button type="submit" className="btn btn-primary">Reset Password</button>
       </form>
-    </div>
     </div>
   )
 }
