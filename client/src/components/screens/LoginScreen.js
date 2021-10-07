@@ -3,6 +3,10 @@ import {useState,useEffect} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import dashbourd from './dashboard.png'
+import feature1 from './images/design.svg'
+import feature2 from './images/intelligence.svg'
+import feature3 from './images/game-dev.svg'
+import GoalItems from '../goals/GoalItems'
 import SecondaryButton from '../buttons/SecondaryButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import EcomShoppingCard from '../cards/ecomshoppingcard/EcomShoppingCard'
@@ -192,7 +196,7 @@ const LoginScreen = ({history}) => {
 
     </header>
     <main>
-        <section>
+
         <div className="home-cover" id="home">
           {/*this is where the gradient starts*/}
                 <div className="block">
@@ -229,6 +233,30 @@ const LoginScreen = ({history}) => {
           {/*image container showing dashboard ends*/}
           </div>
         </div>
+
+
+        <section className="ecom__features section1" id="ecom__features">
+          <h1 className="ecom__heading ">My <span>Services</span> </h1>
+          <div className="ecom__box-container">
+          <GoalItems
+            btnText={"Get Started"}
+             text={"Paths to take, assignments and real projects to help you become a full stack developer under 4-6months"}
+             image={feature1}
+             alt={"juice"}
+             title={"Full Stack Web Development"}/>
+         <GoalItems
+           btnText={"Get Started"}
+            text={"This Interview Preparation Kit has challenges and notes to prepare you ace your interview in a week's time."}
+            image={feature2}
+            alt={"juice"}
+            title={"Algorithms and Data Structures"}/>
+        <GoalItems
+          btnText={"Get Started"}
+           text={"Game development is a software development process, as a video game is software with art, audio, and gameplay."}
+           image={feature3}
+           alt={"juice"}
+           title={" Games/Software Development"}/>
+          </div>
         </section>
     </main>
     </>

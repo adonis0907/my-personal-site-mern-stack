@@ -1,0 +1,67 @@
+.ecom__features-btn{
+
+  width: 200px;
+  margin-top: 1rem;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+ .ecom__features-btn:hover{
+  background: var(--primary-color);
+  color: var(--white);
+  transition: .4s;
+}
+.ecom__feature-box{
+  width: 33rem;
+  margin: 1rem;
+  padding:27px 48px;
+  border-radius: 10px;
+  /* background: var(--white); */
+  outline: var(--outline);
+  outline-offset: -1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow2);
+  transition: all 0.6s ease;
+}
+.ecom__feature-box:hover{
+  /* outline: var(--outline-hover);
+  outline-offset: 0rem; */
+  box-shadow: var(--box-shadow3);
+}
+.ecom__feature-box img{
+  margin: 1rem 0;
+  height: 15rem;
+}
+.ecom__feature-box h3{
+  font-size: 2.5rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.ecom__feature-box p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+
+/* .ecom__box-container.ecom__box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: .7rem 0;
+  background: #eee;
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  color: var(--black);
+  text-transform: none;
+
+} */
