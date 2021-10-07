@@ -6,7 +6,10 @@ import dashbourd from './dashboard.png'
 import feature1 from './images/design.svg'
 import feature2 from './images/intelligence.svg'
 import feature3 from './images/game-dev.svg'
+import product1 from "./images/phone.svg"
+
 import GoalItems from '../goals/GoalItems'
+import ProductItem from '../productItem/ProductItem'
 import SecondaryButton from '../buttons/SecondaryButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import EcomShoppingCard from '../cards/ecomshoppingcard/EcomShoppingCard'
@@ -18,7 +21,9 @@ import {
   faShoppingCart,
   faUser,
   faTrash,
-  faDatabase
+  faDatabase,
+  faStar,
+  faStarHalfAlt
 
 
  } from '@fortawesome/free-solid-svg-icons';
@@ -257,6 +262,59 @@ const LoginScreen = ({history}) => {
            alt={"juice"}
            title={" Games/Software Development"}/>
           </div>
+        </section>
+        <section className="ecom__products" id="products">
+        <h1 className="ecom__heading">Our <span>products</span> </h1>
+          <div className="ecom__product-slider swiper">
+
+              <div className="ecom__product-wrapper">
+              <ProductItem
+                title={"fresh orange"}
+                star1={faStar}
+                star2={faStar}
+                star3={faStar}
+                star4={faStar}
+                star5={faStarHalfAlt}
+                product={product1}
+              />
+              <ProductItem
+                title={"fresh orange"}
+                star1={faStar}
+                star2={faStar}
+                star3={faStar}
+                star4={faStar}
+                star5={faStarHalfAlt}
+                product={product1}
+              />
+              <ProductItem
+                title={"fresh orange"}
+                star1={faStar}
+                star2={faStar}
+                star3={faStar}
+                star4={faStar}
+                star5={faStarHalfAlt}
+                product={product1}
+              />
+              <ProductItem
+                title={"fresh orange"}
+                star1={faStar}
+                star2={faStar}
+                star3={faStar}
+                star4={faStar}
+                star5={faStarHalfAlt}
+                product={product1}
+              />
+              <ProductItem
+                title={"fresh orange"}
+                star1={faStar}
+                star2={faStar}
+                star3={faStar}
+                star4={faStar}
+                star5={faStarHalfAlt}
+                product={product1}
+              />
+              </div>
+              </div>
         </section>
     </main>
     </>
