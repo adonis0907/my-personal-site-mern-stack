@@ -47,7 +47,7 @@ html{
 section{
   padding: 2rem 9%;
 }
-.ecom__heading{
+.landing__heading{
   text-align: center;
   padding: 2rem 0;
   padding-bottom: 3rem;
@@ -55,7 +55,7 @@ section{
   color: var(--black);
 
 }
-.ecom__heading span{
+.landing__heading span{
   background: var(--primary-color);
   color: var(--white);
   display: inline-block;
@@ -77,31 +77,31 @@ section{
   box-shadow: var(--box-shadow);
 }
 
-.ecom__header .ecom__logo{
+.landing__header .landing__logo{
   font-size: 1.5rem;
   font-weight: bolder;
   color: var(--black);
 }
 
-.ecom__header .ecom__logo svg{
+.landing__header .landing__logo svg{
   color: var(--primary-color);
 }
-.ecom__header a{
+.landing__header a{
   font-size: 1.2rem;
   margin: 0 1rem;
   color: var(--black);
 }
-.ecom__header a:hover{
+.landing__header a:hover{
   color: var(--primary-color);
 }
 
-.ecom__header .ecom__icons{
+.landing__header .landing__icons{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.ecom__header .ecom__icons div{
+.landing__header .landing__icons div{
   height: 2.5rem;
   width: 2.5rem;
   line-height: 2.5rem;
@@ -115,16 +115,16 @@ section{
   transition: .5s;
 }
 
-.ecom__header .ecom__icons div:hover{
+.landing__header .landing__icons div:hover{
   background: var(--primary-color);
   color:var(--white);
 }
 
-#ecom__menu-btn{
+#landing__menu-btn{
   display: none;
 }
 
-.ecom__header .ecom__search-form{
+.landing__header .landing__search-form{
   position: absolute;
   top:110%;right: -110%;
   width: 27rem;
@@ -137,13 +137,13 @@ section{
   box-shadow: var(--box-shadow);
 }
 
-.ecom__header .ecom__search-form.ecom__active{
+.landing__header .landing__search-form.landing__active{
   right: 2rem;
   transition: .5s linear;
 
 }
 
-.ecom__header .ecom__search-form input{
+.landing__header .landing__search-form input{
   height: 100%;
   width: 100%;
   background: none;
@@ -154,7 +154,7 @@ section{
   border: none;
 }
 
-.ecom__header .ecom__search-form label{
+.landing__header .landing__search-form label{
   font-size: 2rem;
   color: var(--black);
   cursor: pointer;
@@ -162,12 +162,12 @@ section{
   padding:0 1rem;
 }
 
-.ecom__header .ecom__search-form label:hover{
+.landing__header .landing__search-form label:hover{
     color: var(--primary-color);
 
 }
 
-.ecom__header .ecom__shopping-card{
+.landing__header .landing__shopping-card{
 position: absolute;
 top:110%;right: -110%;
 
@@ -177,19 +177,19 @@ box-shadow: var(--box-shadow);
 width: 25rem;
 background: var(--white);
 }
-.ecom__header .ecom__shopping-card.ecom__active{
+.landing__header .landing__shopping-card.landing__active{
   right: 2rem;
   transition: .5s linear;
 }
 
-.ecom__header .ecom__shopping-card .ecom__total{
+.landing__header .landing__shopping-card .landing__total{
   font-size: 2rem;
   padding: 1rem 0;
   text-align: center;
   color: var(--black);
 }
 
-.ecom__submit-btn{
+.landing__submit-btn{
   width: 100%;
   margin-top: 1rem;
   display: block;
@@ -203,13 +203,13 @@ background: var(--white);
   background: none;
 }
 
-.ecom__submit-btn:hover{
+.landing__submit-btn:hover{
   background: var(--primary-color);
   color: var(--white);
   transition: .5s;
 }
 
-.ecom__header .ecom__login-from{
+.landing__header .landing__login-from{
   position: absolute;
   top:110%;right: -110%;
   width: 24rem;
@@ -219,18 +219,18 @@ background: var(--white);
   background: var(--white);
   text-align: center;
 }
-.ecom__header .ecom__login-from.ecom__active{
+.landing__header .landing__login-from.landing__active{
   right:2rem;
   transition: .5s linear;
 }
 
-.ecom__header .ecom__login-from h3{
+.landing__header .landing__login-from h3{
   font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--black);
 }
 
-.ecom__header .ecom__login-from .ecom__box{
+.landing__header .landing__login-from .landing__box{
   width: 100%;
   margin: .7rem 0;
   background: #eee;
@@ -241,38 +241,38 @@ background: var(--white);
   text-transform: none;
 
 }
-.ecom__header .ecom__login-from input{
+.landing__header .landing__login-from input{
   /* background: none; */
   border: .5px solid var(--black);
 }
-.ecom__header .ecom__login-from p{
+.landing__header .landing__login-from p{
   font-size: 1rem;
   padding: .5rem 0;
   color: var(--light-color);
 
 }
 
-.ecom__header .ecom__login-from p a{
+.landing__header .landing__login-from p a{
   color: var(--primary-color);
   text-decoration: underline;
   font-size: 1rem;
 }
 
 @media (max-width:991px) {
-  .ecom__header{
+  .landing__header{
     padding: 2rem;
   }
 }
 
 @media (max-width:768px) {
-  #ecom__menu-btn{
+  #landing__menu-btn{
     display: inline-block;
   }
-  .ecom__header .ecom__search-form{
+  .landing__header .landing__search-form{
     width: 90%;
     font-size: 2rem;
   }
-  .ecom__header .ecom__navbar{
+  .landing__header .landing__navbar{
     position: absolute;
     top:110%;right: -110%;
     width: 22rem;
@@ -280,11 +280,11 @@ background: var(--white);
     border-radius: .5rem;
     background: var(--white);
   }
-  .ecom__header .ecom__navbar.ecom__active{
+  .landing__header .landing__navbar.landing__active{
     right: 2rem;
     transition: .5s linear;
   }
-  .ecom__header .ecom__navbar a{
+  .landing__header .landing__navbar a{
     font-size: 2rem;
     margin: 2rem 2.5rem;
     display: block;
@@ -393,23 +393,23 @@ background: var(--white);
   animation-delay: 0.8s;
   animation-fill-mode: forwards;
 
-}.ecom__products .ecom__product-slider{
+}.landing__products .landing__product-slider{
   padding: 1rem;
 
 }
 
-.ecom__products .ecom__product-slider:first-child{
+.landing__products .landing__product-slider:first-child{
   margin-bottom: 2rem;
 }
 
-.ecom__product-wrapper{
+.landing__product-wrapper{
   display: flex;
   overflow-y:hidden;
   overflow-x: scroll;
 
 }
 
-.ecom__product-wrapper::-webkit-scrollbar{
+.landing__product-wrapper::-webkit-scrollbar{
   display: none;
 }
 
@@ -558,27 +558,27 @@ background: var(--white);
 .home-cover{
   margin-bottom:14rem;
 }
-.ecom__box-container{
+.landing__box-container{
   display: flex;
   flex-wrap: wrap;
 }
 
-.ecom__products .ecom__product-slider{
+.landing__products .landing__product-slider{
   padding: 1rem;
 
 }
 
-.ecom__products .ecom__product-slider:first-child{
+.landing__products .landing__product-slider:first-child{
   margin-bottom: 2rem;
 }
 
-.ecom__product-wrapper{
+.landing__product-wrapper{
   display: flex;
   overflow-y:hidden;
   overflow-x: scroll;
 
 }
 
-.ecom__product-wrapper::-webkit-scrollbar{
+.landing__product-wrapper::-webkit-scrollbar{
   display: none;
 }

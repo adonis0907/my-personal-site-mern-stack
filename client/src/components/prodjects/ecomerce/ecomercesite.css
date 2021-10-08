@@ -71,3 +71,8 @@ section{
   font-size: 50%;
   }
 }
+
+.link{
+  text-decoration: none;
+  color: inherit;
+}

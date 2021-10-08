@@ -5,6 +5,8 @@ import Home from './components/home/Home'
 import Feature from './components/feature/Feature'
 import Product from './components/product/Product'
 import Category from './components/category/Category'
+import Reviews from './components/reviews/Reviews'
+
 const EcomerceSite = () => {
   return (
     <div className="ecomerce-body">
@@ -26,6 +28,10 @@ const EcomerceSite = () => {
 
     {/*category component start*/}
     <Category/>
+    {/*categorys component ends*/}
+
+    {/*category component start*/}
+    <Reviews/>
     {/*categorys component ends*/}
 
 

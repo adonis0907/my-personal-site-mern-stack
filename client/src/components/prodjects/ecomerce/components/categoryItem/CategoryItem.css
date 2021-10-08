@@ -1,0 +1,50 @@
+.ecom__cat-btn{
+
+  width: 200px;
+  margin-top: 1rem;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+ .ecom__cat-btn:hover{
+  background: var(--orange);
+  color: var(--white);
+  transition: .2s;
+}
+
+.ecom__cat-box{
+  padding: 3rem 2rem;
+  border-radius: .5rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  outline: var(--outline);
+  outline-offset: -1rem;
+  text-align: center;
+  transition: .4s linear;
+}
+.ecom__cat-box:hover{
+  outline: var(--outline-hover);
+  outline-offset: 0rem;
+}
+
+.ecom__cat-box img{
+  margin: 1rem 0;
+  height: 15rem;
+}
+.ecom__cat-box h3{
+font-size: 2rem;
+color: var(--black);
+line-height: 1.8;
+}
+.ecom__cat-box p{
+font-size: 1.7rem;
+color: var(--light-color);
+line-height: 1.8;
+padding: 1rem 0;
+}
