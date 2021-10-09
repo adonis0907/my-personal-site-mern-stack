@@ -1,12 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faShoppingBasket,faBars,faSearch,faUser,faDatabase} from '@fortawesome/free-solid-svg-icons';
+import {faBars,faSearch,faUser,faDatabase} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom'
 const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandler}) => {
   function landing__searchMenu(){
-    let landing__cardForm=document.querySelector('.landing__shopping-card');
-    let landing__cardForm2=document.querySelector('.landing__login-from');
-    let landing__navbar=document.querySelector('.landing__navbar');
+    // let landing__cardForm=document.querySelector('.landing__shopping-card');
+    // let landing__cardForm2=document.querySelector('.landing__login-from');
+    // let landing__navbar=document.querySelector('.landing__navbar');
     let landing__searchForm=document.querySelector('.landing__search-form');
 
       landing__searchForm.classList.toggle('landing__active')
@@ -19,24 +19,24 @@ const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandl
 
   }
 
-  function landing__cardMenu(){
-    let landing__cardForm=document.querySelector('.landing__shopping-card');
-    let landing__cardForm2=document.querySelector('.landing__login-from');
-    let landing__navbar=document.querySelector('.landing__navbar');
-    let landing__searchForm=document.querySelector('.landing__search-form');
-
-      landing__cardForm.classList.toggle('landing__active')
+  // function landing__cardMenu(){
+  //   let landing__cardForm=document.querySelector('.landing__shopping-card');
+  //   let landing__cardForm2=document.querySelector('.landing__login-from');
+  //   let landing__navbar=document.querySelector('.landing__navbar');
+  //   let landing__searchForm=document.querySelector('.landing__search-form');
+  //
+  //     landing__cardForm.classList.toggle('landing__active')
       // landing__searchForm.classList.remove('landing__active')
       // landing__navbar.classList.remove('landing__active')
       // landing__cardForm2.classList.remove('landing__active')
 
 
-  }
+  // }
   function landing__loginForm(){
-    let landing__cardForm=document.querySelector('.landing__shopping-card');
+    // let landing__cardForm=document.querySelector('.landing__shopping-card');
     let landing__cardForm2=document.querySelector('.landing__login-from');
-    let landing__navbar=document.querySelector('.landing__navbar');
-    let landing__searchForm=document.querySelector('.landing__search-form');
+    // let landing__navbar=document.querySelector('.landing__navbar');
+    // let landing__searchForm=document.querySelector('.landing__search-form');
       landing__cardForm2.classList.toggle('landing__active')
 
       // landing__searchForm.classList.remove('landing__active')
@@ -47,10 +47,10 @@ const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandl
   }
 
   function landing__navwidow(){
-    let landing__cardForm=document.querySelector('.landing__shopping-card');
-    let landing__cardForm2=document.querySelector('.landing__login-from');
+    // let landing__cardForm=document.querySelector('.landing__shopping-card');
+    // let landing__cardForm2=document.querySelector('.landing__login-from');
     let landing__navbar=document.querySelector('.landing__navbar');
-    let landing__searchForm=document.querySelector('.landing__search-form');
+    // let landing__searchForm=document.querySelector('.landing__search-form');
 
       landing__navbar.classList.toggle('landing__active')
       // landing__searchForm.classList.remove('landing__active')
@@ -60,7 +60,7 @@ const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandl
   }
   return (
     <header className={isScrolled?"landing__header scrolled" : "landing__header"}>
-    <a href="#" className="landing__logo link"><FontAwesomeIcon icon={ faShoppingBasket }/>MrSuber</a>
+    <Link to="/" className="landing__logo link">MrSuber</Link>
     <nav className="landing__navbar">
       <a href="#landing__home">home</a>
       <a href="#landing__features">features</a>

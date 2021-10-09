@@ -1,0 +1,41 @@
+.ecom__review-box{
+  background: var(--white);
+  border-radius: .5rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  outline-offset: -1rem;
+  outline: var(--outline);
+  box-shadow: var(--box-shadow);
+  transition: .2s linear;
+  width: 34rem;
+  margin:2rem;
+}
+
+.ecom__review-box:hover{
+  outline-offset: 0rem;
+  outline: var(--outline-hover);
+}
+
+.ecom__review-box img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+.ecom__review-box p{
+  padding: 1rem 0;
+  line-height: 1.8rem;
+  color:var(--light-color);
+  font-size: 1rem;
+
+}
+.ecom__review-box h3{
+  padding-bottom: .5rem;
+  color:var(--black);
+  font-size: 2.2rem;
+
+}
+.ecom__review-stars svg{
+  color:var(--orange);
+  font-size: 2.2rem;
+  padding: .5rem 0;
+}

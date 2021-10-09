@@ -6,6 +6,7 @@ import card3 from "../../images/cart-img-3.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import EcomShoppingCard from '../cards/ecomshoppingcard/EcomShoppingCard'
 import PrimaryButton from "../buttons/PrimaryButton"
+import {Link} from 'react-router-dom'
 import {
   faShoppingBasket,
   faBars,
@@ -102,7 +103,7 @@ const Header = () => {
 
   return (
     <header className="ecom__header">
-    <a href="#" className="ecom__logo link"><FontAwesomeIcon icon={ faShoppingBasket }/>Groco</a>
+    <Link to="/" className="ecom__logo link"><FontAwesomeIcon icon={ faShoppingBasket }/>Groco</Link>
     <nav className="ecom__navbar">
       <a href="#ecom__home">home</a>
       <a href="#ecom__features">features</a>
@@ -138,8 +139,8 @@ const Header = () => {
       <h3>Login now</h3>
       <input type="email" placeholder="your email" className="ecom__box" />
       <input type="password" placeholder="your password" className="ecom__box" />
-        <p className="ecom__form-paragraph">forgot your password?<a href="#">Reset Now</a></p>
-        <p className="ecom__form-paragraph">Don't have an account?<a href="#">Create Now</a></p>
+        <p className="ecom__form-paragraph">forgot your password?<Link to="/">Reset Now</Link></p>
+        <p className="ecom__form-paragraph">Don't have an account?<Link to="/">Create Now</Link></p>
       <input type="submit" value="login now" className="ecom__submit-btn"/>
 
     </form>

@@ -1,5 +1,4 @@
 import React from 'react'
-import {faStar,faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import GoalItems from '../goals/GoalItems'
 import ProductItem from '../productItem/ProductItem'
 import SecondaryButton from '../buttons/SecondaryButton'
@@ -8,6 +7,7 @@ import feature1 from './../images/design.svg'
 import feature2 from './../images/intelligence.svg'
 import feature3 from './../images/game-dev.svg'
 import product1 from "./../images/phone.svg"
+import {Link} from 'react-router-dom'
 
 const Content = () => {
   return (
@@ -31,7 +31,7 @@ const Content = () => {
                     A MERN aplication with an amazing dashboard and a tutorial section to help perpare for job coding chanlange.
                     </p>
                       <div className="button-area">
-                        <a href="#"> Contact </a>
+                        <Link to="/"> Contact </Link>
 
                         <SecondaryButton  name={"Dashbourd"}/>
 

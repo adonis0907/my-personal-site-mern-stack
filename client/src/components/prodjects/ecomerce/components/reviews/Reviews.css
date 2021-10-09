@@ -1,0 +1,19 @@
+.ecom__review .ecom__review-slider{
+  padding: 1rem;
+
+}
+
+.ecom__review .ecom__review-slider:first-child{
+  margin-bottom: 2rem;
+}
+
+.ecom_rewiew-wrapper{
+  display: flex;
+  overflow-y:hidden;
+  overflow-x: scroll;
+
+}
+
+.ecom_rewiew-wrapper::-webkit-scrollbar{
+  display: none;
+}

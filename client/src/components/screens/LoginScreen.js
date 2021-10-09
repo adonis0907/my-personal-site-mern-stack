@@ -50,10 +50,10 @@ const LoginScreen = ({history}) => {
 
 
   window.onscroll=()=>{
-    let landing__cardForm=document.querySelector('.landing__shopping-card');
-    let landing__cardForm2=document.querySelector('.landing__login-from');
-    let landing__navbar=document.querySelector('.landing__navbar');
-    let landing__searchForm=document.querySelector('.landing__search-form');
+    // let landing__cardForm=document.querySelector('.landing__shopping-card');
+    // let landing__cardForm2=document.querySelector('.landing__login-from');
+    // let landing__navbar=document.querySelector('.landing__navbar');
+    // let landing__searchForm=document.querySelector('.landing__search-form');
 
     // if( landing__searchForm.classList[1]==='landing__active'){
     //   landing__searchForm.classList.remove('landing__active')

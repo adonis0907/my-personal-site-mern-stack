@@ -8,7 +8,7 @@ outline: var(--outline);
 box-shadow: var(--box-shadow);
 transition: .2s linear;
 width: 34rem;
-margin:2rem;
+margin:.5rem;
 }
 
 .ecom__product-box:hover{
