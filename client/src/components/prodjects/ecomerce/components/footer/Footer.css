@@ -1,0 +1,114 @@
+.ecom__footer{
+  background: var(--white);
+  text-align: center;
+}
+.ecom__footer .ecom_footer-box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+  gap:1.5rem;
+}
+
+.ecom__footer .ecom_footer-box-container .ecom_footer-box h3{
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.ecom__footer .ecom_footer-box-container .ecom_footer-box svg{
+
+  color: var(--orange);
+
+}
+
+.ecom__footer .ecom_footer-box-container .ecom_footer-box a{
+  font-size: 1.5rem;
+  color: var(--ligth-color);
+  padding: 1rem 0;
+  display: block;
+}
+.ecom__footer .ecom_footer-box-container .ecom_footer-box p{
+  font-size: 1.5rem;
+  color: var(--ligth-color);
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+.ecom__footer .ecom_footer-box-container .ecom_footer-box a svg{
+  /* font-size: 1.5rem; */
+  /* color: var(--orange); */
+  padding-right: .5rem;
+  transition: .4s
+}
+
+.ecom__footer .ecom_footer-box-container .ecom_footer-box a:hover svg{
+margin-right: 2rem;
+}
+
+.ecom__footer .ecom_footer-box-container .ecom_footer-box .share svg{
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: .5rem;
+  font-size: 2rem;
+  color: var(--black);
+  margin-left: .2rem;
+  background: #eee;
+  text-align: center;
+
+
+}
+.ecom__footer .ecom_footer-box-container .ecom_footer-box .ecom__email{
+  margin: .7rem 0;
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: #eee;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+  border: none;
+  width: 100%;
+}
+.ecom__footer .ecom_footer-box-container .ecom_footer-box .ecom__payment-img{
+  margin-top: 2rem;
+  height:3rem;
+}
+.ecom__footer-btn{
+
+  width: 200px;
+  margin-top: 1rem;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  /* margin-bottom: 2rem; */
+}
+
+ .ecom__footer-btn:hover{
+  background: var(--orange);
+  color: var(--white);
+  transition: .2s;
+}
+.ecom__footer .ecom_footer-box-container .ecom_footer-box .share svg:hover{
+  background: var(--orange);
+  color: var(--white);
+}
+.ecom__footer .ecom_footer-box-container .ecom_footer-box .share{
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.ecom__credit{
+  text-align: center;
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border-top: var(--border);
+}
+.ecom__credit span{
+  color:var(--orange);
+}
