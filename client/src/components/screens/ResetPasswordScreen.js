@@ -1,6 +1,8 @@
 import './ResetPasswordScreen.css'
 import{useState} from 'react'
 import{Link} from "react-router-dom"
+import Header3 from '../mainHeader/Header3'
+import Content from '../mainContent/Content'
 import axios from "axios"
 
 const ResetPasswordScreen = ({match}) => {
@@ -8,6 +10,11 @@ const ResetPasswordScreen = ({match}) => {
   const [confirmpassword,setConfirmpassword]=useState("")
   const[error,setError]=useState("")
   const[success,setSuccess]=useState("");
+  const [isScrolled,setIsScrolled]=useState(true)
+  window.onscroll =()=>{
+    setIsScrolled(window.pageYOffset===0?false:true)
+    return ()=>(window.onscroll=null);
+  }
 
   const resetPasswordHandler = async (e)=>{
   e.preventDefault()
@@ -40,24 +47,20 @@ const ResetPasswordScreen = ({match}) => {
   }
 
   return (
-    <div className="resetpassword-screen">
-      <form onSubmit={resetPasswordHandler} className="resetpassword-screen_form">
-        <h3 className="resetpassword-screen_title">Reset Password</h3>
-        {error &&<span className="error-message">{error}</span>}
-        {success && <span className="success-message">{success}<Link to="/login">Login</Link></span>}
-        <div className="form-group">
-          <label htmlFor="password">New Password</label>
-          <input type="password" required id="password" placeholder="Enter new password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-        </div>
+    <>
+      <Header3
 
-        <div className="form-group">
-          <label htmlFor="confirmpassword">Confirm New Password</label>
-          <input type="password" required id="confirmpassword" placeholder="Confirm new password" value={confirmpassword} onChange={(e)=>setConfirmpassword(e.target.value)}/>
-        </div>
-
-        <button type="submit" className="btn btn-primary">Reset Password</button>
-      </form>
-    </div>
+      setPassword={setPassword}
+      confirmpassword={confirmpassword}
+      setConfirmpassword={setConfirmpassword}
+      error={error}
+      isScrolled={isScrolled}
+      resetPasswordHandler={resetPasswordHandler}
+      success={success}
+      password={password}
+      />
+        <Content />
+    </>
   )
 }
 

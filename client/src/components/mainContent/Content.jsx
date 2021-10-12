@@ -2,11 +2,13 @@ import React from 'react'
 import GoalItems from '../goals/GoalItems'
 import ProductItem from '../productItem/ProductItem'
 import SecondaryButton from '../buttons/SecondaryButton'
+import Blog from '../blogs/Blog'
+import Footer from '../footer/Footer'
 import dashbourd from './../images/dashboard.png'
 import feature1 from './../images/design.svg'
 import feature2 from './../images/intelligence.svg'
 import feature3 from './../images/game-dev.svg'
-import product1 from "./../images/phone.svg"
+import product1 from "./../images/blogs/blog1.svg"
 import {Link} from 'react-router-dom'
 
 const Content = () => {
@@ -81,26 +83,30 @@ const Content = () => {
               <div className="landing__product-wrapper">
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
+                product={product1}
+              />
+              <ProductItem
+                title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
@@ -114,67 +120,39 @@ const Content = () => {
               <div className="landing__product-wrapper">
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               <ProductItem
                 title={"fresh orange"}
+                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
                 product={product1}
               />
               </div>
               </div>
         </section>
-        <section className="landing__products" id="products">
-        <h1 className="landing__heading">My <span>blogs</span> </h1>
-          <div className="landing__product-slider swiper">
-
-              <div className="landing__product-wrapper">
-              <ProductItem
-                title={"fresh orange"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-
-                product={product1}
-              />
-              </div>
-              </div>
-        </section>
+        <Blog />
+        <Footer />
     </main>
   )
 }

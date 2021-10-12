@@ -1,11 +1,18 @@
 import './ForgotPasswordScreen.css'
 import axios from 'axios'
 import {useState} from "react"
+import Header4 from '../mainHeader/Header4'
+import Content from '../mainContent/Content'
 
 const ForgotPasswordScreen = () => {
   const[email,setEmail]=useState("")
   const[error,setError]=useState("")
   const[success,setSuccess]=useState("");
+  const [isScrolled,setIsScrolled]=useState(true)
+  window.onscroll =()=>{
+    setIsScrolled(window.pageYOffset===0?false:true)
+    return ()=>(window.onscroll=null);
+  }
 
   const forgotPasswordHandler = async (e)=>{
     e.preventDefault()
@@ -27,21 +34,19 @@ const ForgotPasswordScreen = () => {
     }
   }
   return (
-    <div className="forgotpassword-screen">
-      <form onSubmit={forgotPasswordHandler} className="forgotpassword-screen_form">
-        <h3 className="forgotpassword-screen_title">Forgot Password</h3>
-        {error &&<span className="error-message">{error}</span>}
-        {success && <span className="success-message">{success}</span>}
-        <div className="form-group">
-          <p className="forgotpassword-screen_subtext">
-          Please enter the email address you register your account with. We will send you reset password confirmation to this email
-          </p>
-          <label htmlFor="email">Email:</label>
-          <input type="email" required id="email" placeholder="Email address" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-        </div>
-        <button type="submit" className="btn btn-primary">Send Email</button>
-      </form>
-    </div>
+    <>
+      <Header4
+
+      email={email}
+      setEmail={setEmail}
+      error={error}
+      isScrolled={isScrolled}
+      forgotPasswordHandler={forgotPasswordHandler}
+      success={success}
+
+      />
+        <Content />
+    </>
   )
 }
 

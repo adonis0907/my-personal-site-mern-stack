@@ -1,0 +1,8 @@
+
+ .main__blog1-box-container{
+  display: grid ;
+grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+grid-gap: 1.5rem;
+gap: 1.5rem;
+
+}

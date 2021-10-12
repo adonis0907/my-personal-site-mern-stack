@@ -2,9 +2,10 @@
 /* background: var(--white); */
 border-radius: .5rem;
 text-align: center;
-padding: 3rem 2rem;
-outline-offset: -1rem;
-outline: var(--outline);
+/* padding: 3rem 2rem; */
+/* outline-offset: -1rem; */
+/* outline: var(--outline); */
+
 box-shadow: var(--box-shadow2);
 transition: .2s linear;
 width: 34rem;
@@ -12,18 +13,28 @@ margin:2rem;
 }
 
 .landing__product-box:hover{
-  outline-offset: 0rem;
-  outline: var(--outline-hover);
+  /* outline-offset: 0rem; */
+  /* outline: var(--outline-hover); */
   box-shadow: var(--box-shadow3);
 }
 
 .landing__product-box img{
     height: 20rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 
 .landing__product-box h3{
-  font-size: 2.5rem;
-  color: var(--black);
+  line-height: 1.8;
+  color:var(--black);
+  font-size: 2rem;
+  padding: .5rem 0;
+}
+.landing__product-box p{
+  line-height: 1.8rem;
+  color:var(--ligth-color);
+  font-size: 1.2rem;
+  padding: .5rem 0;
 }
 
 .landing__product-box .landing__product-price{
@@ -36,4 +47,25 @@ margin:2rem;
   font-size: 2rem;
   color: var(--orange);
   padding: .5rem 0;
+}
+
+
+.landing__product-btn{
+
+  width: 200px;
+  margin: 2rem 0;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+.landing__product-btn:hover{
+  background: var(--primary-color);
+  color: var(--white);
+  transition: .2s;
 }

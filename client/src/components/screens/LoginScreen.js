@@ -15,7 +15,7 @@ const LoginScreen = ({history}) => {
     setIsScrolled(window.pageYOffset===0?false:true)
     return ()=>(window.onscroll=null);
   }
-  console.log(window.pageYOffset)
+
 
   useEffect(()=>{
     if(localStorage.getItem("authToken")){

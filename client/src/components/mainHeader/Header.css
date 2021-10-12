@@ -1,0 +1,228 @@
+.scrolled{
+
+}
+
+.landing__header{
+  position: fixed;
+  top:0;left: 0;right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+}
+.landing__header .landing__logo{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+
+.landing__header .landing__logo svg{
+  color: var(--primary-color);
+}
+.landing__header a{
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+.landing__header a:hover{
+  color: var(--primary-color);
+}
+
+.landing__header .landing__icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing__header .landing__icons div{
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: .5rem;
+  background: #eee;
+  color:var(--black);
+  font-size: 1rem;
+  margin-right: .3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.landing__header .landing__icons div:hover{
+  background: var(--primary-color);
+  color:var(--white);
+}
+
+#landing__menu-btn{
+  display: none;
+}
+
+.landing__header .landing__search-form{
+  position: absolute;
+  top:110%;right: -110%;
+  width: 27rem;
+  height: 2.5rem;
+  background: var(--white);
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.landing__header .landing__search-form.landing__active{
+  right: 2rem;
+  transition: .5s linear;
+
+}
+
+.landing__header .landing__search-form input{
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1rem;
+  color:var(--black);
+  padding: 0 1.5rem;
+  border: none;
+}
+
+.landing__header .landing__search-form label{
+  font-size: 2rem;
+  color: var(--black);
+  cursor: pointer;
+  transition: .5s;
+  padding:0 1rem;
+}
+
+.landing__header .landing__search-form label:hover{
+    color: var(--primary-color);
+
+}
+
+.landing__header .landing__shopping-card{
+position: absolute;
+top:110%;right: -110%;
+
+padding:1rem;
+border-radius: .5rem;
+box-shadow: var(--box-shadow);
+width: 25rem;
+background: var(--white);
+}
+.landing__header .landing__shopping-card.landing__active{
+  right: 2rem;
+  transition: .5s linear;
+}
+
+.landing__header .landing__shopping-card .landing__total{
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--black);
+}
+
+.landing__submit-btn{
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+.landing__submit-btn:hover{
+  background: var(--primary-color);
+  color: var(--white);
+  transition: .5s;
+}
+
+.landing__header .landing__login-from{
+  position: absolute;
+  top:110%;right: -110%;
+  width: 24rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  border-radius: .5rem;
+  background: var(--white);
+  text-align: center;
+}
+.landing__header .landing__login-from.landing__active{
+  right:2rem;
+  transition: .5s linear;
+}
+
+.landing__header .landing__login-from h3{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.landing__header .landing__login-from .landing__box{
+  width: 100%;
+  margin: .7rem 0;
+  background: #eee;
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  color: var(--black);
+  text-transform: none;
+
+}
+.landing__header .landing__login-from input{
+  /* background: none; */
+  border: .5px solid var(--black);
+}
+.landing__header .landing__login-from p{
+  font-size: 1rem;
+  padding: .5rem 0;
+  color: var(--light-color);
+
+}
+
+.landing__header .landing__login-from p a{
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+@media (max-width:991px) {
+  .landing__header{
+    padding: 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  #landing__menu-btn{
+    display: inline-block;
+  }
+  .landing__header .landing__search-form{
+    width: 90%;
+    font-size: 2rem;
+  }
+  .landing__header .landing__navbar{
+    position: absolute;
+    top:110%;right: -110%;
+    width: 22rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background: var(--white);
+  }
+  .landing__header .landing__navbar.landing__active{
+    right: 2rem;
+    transition: .5s linear;
+  }
+  .landing__header .landing__navbar a{
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    display: block;
+  }
+}

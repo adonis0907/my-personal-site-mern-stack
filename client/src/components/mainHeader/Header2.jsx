@@ -3,7 +3,7 @@ import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars,faSearch,faUser,faDatabase} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom'
-const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandler}) => {
+const Header2 = ({username,setUsername,confirmpassword,setConfirmpassword,email,password,setEmail,setPassword,error,isScrolled,registerHandler}) => {
   function landing__searchMenu(){
     // let landing__cardForm=document.querySelector('.landing__shopping-card');
     // let landing__cardForm2=document.querySelector('.landing__login-from');
@@ -88,23 +88,25 @@ const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandl
 
 
 
-    <form onSubmit={loginHandler} className="landing__login-from landing__active">
-      <h3 >Login to dashboard</h3>
+    <form onSubmit={registerHandler} className="landing__login-from landing__active">
+      <h3 >Create New account</h3>
       {error && <span className="error-message">{error}</span>}
 
 
 
+      <input className="landing__box" type="text" required id="name" placeholder="Enter Username" value={username} onChange={(e) =>setUsername(e.target.value)}/>
 
         <input className="landing__box" type="email" required id="email" placeholder="Enter email" value={email} onChange={(e) =>setEmail(e.target.value)} tabIndex={1}/>
 
 
 
         <input className="landing__box" type="password" required id="password" placeholder="Enter Password" value={password} onChange={(e) =>setPassword(e.target.value)} tabIndex={2}/>
-        <p className="landing__form-paragraph">forgot your password?<Link to="/forgotpassword">Reset Now</Link></p>
-        <p className="landing__form-paragraph">Don't have an account?<Link to="/register">Create Now</Link></p>
+        <input className="landing__box" type="password" required id="confirmpassword" placeholder="Confirm Password" value={confirmpassword} onChange={(e) =>setConfirmpassword(e.target.value)}/>
+
+        <p className="landing__form-paragraph">Already have an account?<Link to="/login">Login Now</Link></p>
 
 
-      <button type="submit" className="landing__submit-btn" tabIndex={3}>Login</button>
+      <button type="submit" className="landing__submit-btn" tabIndex={3}>Register</button>
 
     </form>
 
@@ -114,4 +116,4 @@ const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandl
   )
 }
 
-export default Header
+export default Header2
