@@ -2,9 +2,10 @@ import React from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom'
+import {LinkedIn,GitHub,Facebook,Twitter} from '@material-ui/icons'
 import img from '../images/payment.png'
 import {
-faShoppingBasket,
+
 faArrowRight,
 faPhone,
 faEnvelope,
@@ -20,10 +21,10 @@ const Footer = () => {
         <h3> MrSuber  </h3>
         <p>this is a problem of footer yari yarah . and so on an so forth</p>
         <div className="share">
-          <a href="facebook.com"><FontAwesomeIcon icon={faShoppingBasket}/></a>
-          <a href="facebook.com"><FontAwesomeIcon icon={faShoppingBasket}/></a>
-          <a href="facebook.com"><FontAwesomeIcon icon={faShoppingBasket}/></a>
-          <a href="facebook.com"><FontAwesomeIcon icon={faShoppingBasket}/></a>
+          <a href="https://www.linkedin.com/in/mohamad-siysinyuy-26154215b/"><LinkedIn/></a>
+          <a href="https://github.com/mrsuber"><GitHub/></a>
+          <a href="https://www.facebook.com/mohamad.siysinyuy/"><Facebook/></a>
+          <a href="https://twitter.com/msiysinyuy"><Twitter/></a>
 
         </div>
       </div>

@@ -39,11 +39,11 @@
   transition: .4s
 }
 
-.main__footer .main_footer-box-container .main_footer-box a:hover svg{
+ .main_footer-box>a:hover>svg{
 margin-right: 2rem;
 }
 
-.main__footer .main_footer-box-container .main_footer-box .share svg{
+ .share>a>svg{
   height: 4rem;
   width: 4rem;
   line-height: 4rem;
@@ -88,11 +88,11 @@ margin-right: 2rem;
 
  .main__footer-btn:hover{
   background: var(--primary-color);
-  color: var(--white);
+  color: #fff;
   transition: .2s;
 }
-.main__footer .main_footer-box-container .main_footer-box .share svg:hover{
-  background: var(--primary-color);
+ .share>a>svg:hover{
+  background: #23378124;
   color: var(--white);
 }
 .main__footer .main_footer-box-container .main_footer-box .share{
