@@ -63,9 +63,9 @@ const Header = ({email,password,setEmail,setPassword,error,isScrolled,loginHandl
     <header className={isScrolled?"landing__header scrolled" : "landing__header"}>
     <Link to="/" className="landing__logo link">MrSuber</Link>
     <nav className="landing__navbar">
-      <a href="#landing__home">home</a>
+      <Link to="/" >home</Link>
       <a href="#landing__features">prodjects</a>
-      <a href="#landing__products">resume</a>
+      <Link to="/resume" >resume</Link>
       <a href="#landing__categories">site index</a>
       <a href="#landing__rewiew">contact</a>
       <Link to="/" >Dashbourd</Link>

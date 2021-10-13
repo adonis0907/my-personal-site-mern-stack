@@ -4,7 +4,8 @@ import {BrowserRouter as Router,Switch,Route } from 'react-router-dom'
 import PrivateRoute from "./components/routing/PrivateRoute"
 
 // Screens
-import PrivateScreen from "./components/screens/PrivateScreen"
+import PrivateScreen from "./components/screens/Admin/PrivateScreen"
+import Resume from './components/screens/resume/Resume'
 import LoginScreen from "./components/screens/LoginScreen"
 import RegisterScreen from "./components/screens/RegisterScreen"
 import ForgotPasswordScreen from "./components/screens/ForgotPasswordScreen"
@@ -18,6 +19,7 @@ const App=()=> {
         <Switch>
             <PrivateRoute exact path="/" component={PrivateScreen}/>
             <Route exact path="/login" component={LoginScreen}/>
+            <Route exact path="/resume" component={Resume}/>
             <Route exact path="/prodject/ecommerce1" component={EcomerceSite}/>
             <Route exact path="/register" component={RegisterScreen}/>
             <Route exact path="/forgotpassword" component={ForgotPasswordScreen}/>

@@ -1,0 +1,102 @@
+.resume{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.resume__container{
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  margin-top: 100px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: var(--box-shadow2);
+}
+
+.resume__container .resume__left-side{
+  position: relative;
+  background: #003147;
+  padding: 40px;
+}
+.resume__profileText{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.resume__profileText .resume__img-box{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.resume__profileText .resume__img-box img{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.resume__profileText h2{
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
+
+}
+.resume__profileText h2 span{
+  font-size: 0.8em;
+  font-weight:300;
+}
+.resume__contactInfo{
+  padding-top: 40px;
+}
+.resume__title{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.resume__contactInfo ul{
+  position: relative;
+
+}
+.resume__contactInfo ul li{
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+}
+.resume__contactInfo ul li .resume__icon{
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color:#03a9f4;
+}
+.resume__contactInfo ul li span{
+  color: #fff;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.resume__container .resume__right-side{
+  position: relative;
+  background: #fff;
+  padding: 40px;
+}
