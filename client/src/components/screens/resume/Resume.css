@@ -226,5 +226,42 @@
 
 .resume__interest ul li{
   list-style: none;
+  color:#333;
+  font-weight: 500;
+  margin:10px 0;
+}
 
+.resume__interest ul li svg{
+  color:#03a9f4;
+  font-size: 18px;
+  width: 20px;
+}
+
+@media(max-width:1000px) {
+  .resume__container{
+    margin:10px;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .resume__interest ul{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px) {
+  .resume__about .resume__right-box {
+    flex-direction: column;
+  }
+
+    .resume__about .resume__right-box .resume__year-company{
+
+      margin-bottom: 5px;
+    }
+
+    .resume__interest ul{
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    .resume__skills .resume__right-box{
+      grid-template-columns: repeat(1,1fr);
+    }
 }
