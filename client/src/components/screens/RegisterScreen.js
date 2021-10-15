@@ -1,7 +1,6 @@
 import './RegisterScreen.css'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
 import Header2 from '../mainHeader/Header2'
 import Content from '../mainContent/Content'
 

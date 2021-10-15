@@ -91,7 +91,7 @@ const Resume = ({history}) => {
       <div className="resume__left-side">
         <div className="resume__profileText">
           <div className="resume__img-box">
-            <img src={img1} alt="Mohamad image"/>
+            <img src={img1} alt="Mohamad"/>
           </div>
           <h2>Mohamad Siysinyuy Banbong<br/><span>Software Engineer</span></h2>
         </div>

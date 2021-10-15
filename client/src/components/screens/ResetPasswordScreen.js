@@ -1,6 +1,5 @@
 import './ResetPasswordScreen.css'
 import{useState} from 'react'
-import{Link} from "react-router-dom"
 import Header3 from '../mainHeader/Header3'
 import Content from '../mainContent/Content'
 import axios from "axios"

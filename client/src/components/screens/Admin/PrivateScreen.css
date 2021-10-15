@@ -1,0 +1,93 @@
+/* .home{
+  flex: 4;
+}
+.homeWidgets{
+  display: flex;
+  margin: 20px;
+}
+
+.home__container{
+  display: flex;
+  margin-top: 10px;
+} */
+
+.admin{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+
+  overflow-x: hidden;
+}
+
+.admin__container{
+  position: relative;
+  width: 100%;
+}
+
+.admin__navigation{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: #003147;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.admin__navigation ul{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+}
+.admin__navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+
+}
+
+.admin__navigation ul li:hover{
+  background: #03a9f4;
+}
+
+.admin__navigation ul li:nth-child(1):hover{
+  background: transparent;
+}
+
+.admin__navigation ul li a{
+ position: relative;
+ display: block;
+ width: 100%;
+ display: flex;
+ text-decoration: none;
+ color:#fff;
+}
+
+.admin__navigation ul li a .admin__icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.admin__navigation ul li a .admin__icon svg{
+  color:#fff;
+  font-size: 24px;
+}
+
+.admin__navigation ul li a .admin__title{
+position: relative;
+display: block;
+padding: 0 10px;
+height: 60px;
+line-height: 60px;
+white-space: nowrap;
+}
+.admin__main{
+  padding-top: 10rem;
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+}
