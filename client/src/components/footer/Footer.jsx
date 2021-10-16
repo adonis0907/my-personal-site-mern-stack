@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {Link} from 'react-router-dom'
+
 import {LinkedIn,GitHub,Facebook,Twitter} from '@material-ui/icons'
 import img from '../images/payment.png'
 import {

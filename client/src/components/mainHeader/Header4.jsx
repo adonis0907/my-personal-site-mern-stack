@@ -66,7 +66,7 @@ const Header4 = ({success,email,setEmail,error,isScrolled,forgotPasswordHandler}
       <Link to="/" >home</Link>
       <a href="#landing__features">prodjects</a>
       <Link to="/resume" >resume</Link>
-      <a href="#landing__categories">site index</a>
+      <Link to="/portfolio">portfolio</Link>
       <a href="#landing__rewiew">contact</a>
       <Link to="/" >Dashbourd</Link>
 

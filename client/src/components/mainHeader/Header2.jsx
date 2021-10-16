@@ -66,7 +66,7 @@ const Header2 = ({username,setUsername,confirmpassword,setConfirmpassword,email,
       <Link to="/" >home</Link>
       <a href="#landing__features">prodjects</a>
       <Link to="/resume" >resume</Link>
-      <a href="#landing__categories">site index</a>
+      <Link to="/portfolio">portfolio</Link>
       <a href="#landing__rewiew">contact</a>
       <Link to="/" >Dashbourd</Link>
 

@@ -1,0 +1,71 @@
+.main__portfolio-box{
+ overflow: hidden;
+ border-radius: .5rem;
+ box-shadow: var(--box-shadow2);
+ transition: .4s;
+
+}
+.main__portfolio-box:hover{
+  box-shadow: var(--box-shadow3);
+}
+.main__portfolio-box img{
+ height: 25rem;
+ width: 100%;
+ object-fit: cover;
+}
+.main__portfolio-content{
+  padding: 2rem;
+}
+.main__portfolio-content h3{
+  line-height: 1.8;
+  color:var(--black);
+  font-size: 2rem;
+  padding: .5rem 0;
+}
+.main__portfolio-content p{
+  line-height: 1.8rem;
+  color:var(--ligth-color);
+  font-size: 1.2rem;
+  padding: .5rem 0;
+}
+
+.main__portfolio-icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: var(--border);
+}
+.main__portfolio-icons a{
+  color:var(--ligth-color);
+  font-size: 1.5rem;
+}
+.main__portfolio-icons a:hover{
+   color:var(--black);
+}
+.main__portfolio-icons a svg{
+  color:var(--primary-color);
+  font-size: 1.5rem;
+  padding-right: .5rem;
+}
+
+.main__blog-btn{
+
+  width: 200px;
+  margin-top: 1rem;
+  padding: .5rem 4rem;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  border: .2rem solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  background: none;
+}
+
+ .main__blog-btn:hover{
+  background: var(--primary-color);
+  color: var(--white);
+  transition: .2s;
+}
