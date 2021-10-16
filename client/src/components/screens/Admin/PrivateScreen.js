@@ -1,14 +1,23 @@
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHome,faUsers,faComment,faQuestionCircle,faCog,faLock,faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
+import {faDollarSign,faEye,faShoppingCart,faHome,faSearch,faUsers,faComment,faQuestionCircle,faCog,faLock,faSignOutAlt,faBars} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom'
 import img1 from '../../images/me.webp'
 
 import './PrivateScreen.css'
 
 
+function toggleMenu(){
+  let toggle = document.querySelector('.admin__topbar')
+  let navigation = document.querySelector('.admin__navigation')
+  let main = document.querySelector('.admin__main')
 
+  toggle.classList.toggle('active')
+  navigation.classList.toggle('active')
+  main.classList.toggle('active')
+
+}
 const PrivateScreen = ({history}) => {
   const [error,setError] =useState("")
   const [privateData,setPrivateData]=useState("");
@@ -104,25 +113,68 @@ const PrivateScreen = ({history}) => {
             </li>
           </ul>
         </div>
-        <div className="admin__main">
-            <div className="admin__topbar">
-              <div className="admin__toggle">
-                <div className="admin__search">
-                  <label>
-                    <input type="text" placeholder="Search here" />
-                  </label>
-                  <div className="admin__user">
-                    <img src={img1} alt="profile"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
+
+
+
       </div>
     </div>
+    <div className="admin__main">
+        <div className="admin__topbar">
+          <div className="admin__toggle" onClick={toggleMenu}><FontAwesomeIcon icon={faBars}/></div>
+            <div className="admin__search">
+              <label>
+                <input type="text" placeholder="Search here" />
+                <FontAwesomeIcon icon={faSearch}/>
+              </label>
 
-      <div style={{background:"green", color:"white"}}>PrivateData:{privateData}</div>
-      <button onClick={logoutHandler}>Logout</button>
+            </div>
+            <div className="admin__user">
+              <img src={img1} alt="profile"/>
+            </div>
+          </div>
+
+          <div className="admin__cardBox">
+              <div className="admin__card">
+                <div>
+                  <div className="admin__numbers">1,042</div>
+                  <div className="admin__cardName">Daily views</div>
+                </div>
+                <div className="admin__iconBox"><FontAwesomeIcon icon={faEye}/></div>
+              </div>
+
+
+              <div className="admin__card">
+                <div>
+                  <div className="admin__numbers">82</div>
+                  <div className="admin__cardName">Sales</div>
+                </div>
+                <div className="admin__iconBox"><FontAwesomeIcon icon={faShoppingCart}/></div>
+              </div>
+
+
+              <div className="admin__card">
+                <div>
+                  <div className="admin__numbers">200</div>
+                  <div className="admin__cardName">Comments</div>
+                </div>
+                <div className="admin__iconBox"><FontAwesomeIcon icon={faComment}/></div>
+              </div>
+
+
+              <div className="admin__card">
+                <div>
+                  <div className="admin__numbers">$6,042</div>
+                  <div className="admin__cardName">Earnings</div>
+                </div>
+                <div className="admin__iconBox"><FontAwesomeIcon icon={faDollarSign}/></div>
+              </div>
+
+
+          </div>
+        </div>
+    {/*<div style={{background:"green", color:"white"}}>PrivateData:{privateData}</div>
+    <button onClick={logoutHandler}>Logout</button>*/}
+
     </>
 
   )
