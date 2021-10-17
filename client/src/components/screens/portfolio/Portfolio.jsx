@@ -2,20 +2,36 @@ import React from 'react'
 import './Portfolio.css'
 import BlogItem from '../../blogs/blogItem/BlogItem'
 import PortfolioItem from './portfolioItem/PortfolioItem'
-import {
-  faUser,
-  faCalendar
- } from '@fortawesome/free-solid-svg-icons';
 
+import Button from '../../buttons/Button'
 import Header from '../../mainHeader/Header'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import img1 from '../../images/blogs/blog1.svg'
+
+import portfolios from '../../data/protfolios'
+// import ChangeMode from '../../ChangeMode'
 const Portfolio = ({history}) => {
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const [error,setError]=useState('')
   const [isScrolled,setIsScrolled]=useState(true)
+
+  const allButtons =['All',...new Set(portfolios.map(item=>item.category))]
+
+  // const allButtons =['All',...portfolios.map(item=>item.category)]
+
+    const [menuItem, setMenuItems] = useState(portfolios)
+    const [button, setButton] = useState(allButtons)
+
+    const filter =(button)=>{
+      if(button==='All'){
+        setMenuItems(portfolios)
+        return
+      }
+      const filteredData = portfolios.filter(item => item.category===button);
+      setMenuItems(filteredData)
+    }
   window.onscroll =()=>{
     setIsScrolled(window.pageYOffset===0?false:true)
     return ()=>(window.onscroll=null);
@@ -87,37 +103,12 @@ const Portfolio = ({history}) => {
      />
      <section className="main__blogs1" id="main__blogs1">
        <h1 className="landing__heading">current<span>prodjects</span></h1>
+       <Button filter={filter} button={button} />
 
-       <div className="main__blog1-box-container">
      <PortfolioItem
-       img={img1}
-       title={"fresh and organic vegitables and fruits"}
-       text={"If you want them you can alway come and get them in buea behind the old market.i will give you fair price."}
-       icon1={faUser}
-       icon2={faCalendar}
+       data={menuItem}
       />
-      <PortfolioItem
-        img={img1}
-        title={"fresh and organic vegitables and fruits"}
-        text={"If you want them you can alway come and get them in buea behind the old market.i will give you fair price."}
-        icon1={faUser}
-        icon2={faCalendar}
-       />
-       <PortfolioItem
-         img={img1}
-         title={"fresh and organic vegitables and fruits"}
-         text={"If you want them you can alway come and get them in buea behind the old market.i will give you fair price."}
-         icon1={faUser}
-         icon2={faCalendar}
-        />
-        <PortfolioItem
-          img={img1}
-          title={"fresh and organic vegitables and fruits"}
-          text={"If you want them you can alway come and get them in buea behind the old market.i will give you fair price."}
-          icon1={faUser}
-          icon2={faCalendar}
-         />
-      </div>
+
       </section>
 
     </>

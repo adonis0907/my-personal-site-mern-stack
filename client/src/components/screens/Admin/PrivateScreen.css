@@ -186,4 +186,38 @@ white-space: nowrap;
   padding:20px;
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+}
+.admin__cardBox .admin__card{
+  position: relative;
+  /* width: 100%; */
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+.admin__cardBox .admin__card .admin__numbers{
+
+  position: relative;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.admin__cardBox .admin__card .admin__cardName{
+  color: #999;
+
+}
+.admin__cardBox .admin__card .admin__iconBox{
+  font-size: 2.5em;
+  color: #03a9f4;
+}
+
+.admin__details{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr,1fr
 }
