@@ -8,6 +8,7 @@ import Header from '../../mainHeader/Header'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import img1 from '../../images/blogs/blog1.svg'
+import Footer from '../../footer/Footer'
 
 import portfolios from '../../data/protfolios'
 // import ChangeMode from '../../ChangeMode'
@@ -110,6 +111,7 @@ const Portfolio = ({history}) => {
       />
 
       </section>
+      <Footer />
 
     </>
   )
