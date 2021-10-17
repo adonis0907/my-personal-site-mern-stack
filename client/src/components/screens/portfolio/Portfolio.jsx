@@ -111,6 +111,7 @@ const Portfolio = ({history}) => {
       />
 
       </section>
+
       <Footer />
 
     </>

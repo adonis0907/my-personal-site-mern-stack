@@ -50,22 +50,37 @@
   padding-right: .5rem;
 }
 
-.main__blog-btn{
+.main__portfolio-btn{
 
-  width: 200px;
+  width: 150px;
   margin-top: 1rem;
   padding: .5rem 4rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: .5rem;
   border: .2rem solid var(--black);
   color: var(--black);
   cursor: pointer;
   text-align: center;
   background: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
- .main__blog-btn:hover{
+ .main__portfolio-btn:hover{
   background: var(--primary-color);
   color: var(--white);
   transition: .2s;
+}
+.main__portfolio-btn svg{
+  font-size: 20px;
+  padding: 0 4px;
+}
+.main__portfolio-btn-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(4rem,2fr));
+  gap:1.5rem;
+  justify-content: center;
+  align-items: center;
+
 }

@@ -2,6 +2,9 @@ import React from 'react'
 import './PortfolioItem.css'
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import GitHub from '@material-ui/icons/GitHub'
+// import Pinterest from '@material-ui/icons/Pinterest'
+import LinkIcon from '@material-ui/icons/Link';
 import {
   faUser,
   faCalendar
@@ -22,7 +25,10 @@ const PortfolioItem = ({data}) => {
               </div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <button className="main__blog-btn">read more</button>
+              <div className="main__portfolio-btn-container">
+              <a href={item.link1} target="__blank" className="main__portfolio-btn link"><GitHub/>GitHub</a>
+              <a href={item.link2} target="__blank" className="main__portfolio-btn link"><LinkIcon/>Visit Site</a>
+              </div>
             </div>
             </div>
       })
