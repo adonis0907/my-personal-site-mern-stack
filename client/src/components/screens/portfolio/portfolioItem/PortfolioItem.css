@@ -1,5 +1,16 @@
+
+ .main__portfolio-box-container{
+  display: grid ;
+grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+grid-gap: 1.5rem;
+gap: 1.5rem;
+
+
+}
+
 .main__portfolio-box{
  overflow: hidden;
+
  border-radius: .5rem;
  box-shadow: var(--box-shadow2);
  transition: .4s;
@@ -53,7 +64,8 @@
 .main__portfolio-btn{
 
   width: 150px;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin: 1rem;
   padding: .5rem 4rem;
   font-size: 1rem;
   border-radius: .5rem;
@@ -65,6 +77,27 @@
   justify-content: center;
   align-items: center;
   display: flex;
+}
+/* media Queries*/
+/* @media (max-width:335px) {
+  .main__portfolio-btn{
+    width: 90px;
+  }
+} */
+@media (max-width:450px) {
+  .main__portfolio-btn{
+    width: 100px;
+  }
+}
+@media (max-width:600px) {
+  .main__portfolio-btn{
+    width: 120px;
+  }
+}
+@media (max-width:1000px) {
+  .main__portfolio-btn{
+    width: 120px;
+  }
 }
 
  .main__portfolio-btn:hover{
@@ -79,8 +112,7 @@
 .main__portfolio-btn-container{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(4rem,2fr));
-  gap:1.5rem;
-  justify-content: center;
-  align-items: center;
+  gap:1rem;
+
 
 }

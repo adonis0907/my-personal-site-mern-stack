@@ -12,7 +12,7 @@ import {
 
 const PortfolioItem = ({data}) => {
   return (
-    <div className="main__blog1-box-container">
+    <div className="main__portfolio-box-container">
 
     {
       data.map((item)=>{
@@ -27,7 +27,7 @@ const PortfolioItem = ({data}) => {
               <p>{item.text}</p>
               <div className="main__portfolio-btn-container">
               <a href={item.link1} target="__blank" className="main__portfolio-btn link"><GitHub/>GitHub</a>
-              <a href={item.link2} target="__blank" className="main__portfolio-btn link"><LinkIcon/>Visit Site</a>
+              <a href={item.link2} target="__blank" className="main__portfolio-btn link"><LinkIcon/>Site</a>
               </div>
             </div>
             </div>
