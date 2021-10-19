@@ -31,7 +31,7 @@ const portfolios=[
     image:img1,
     link1:'https://github.com/mrsuber/odin_project_14_cvBuilder',
     link2:'https://my-portfolio-fc70b.web.app',
-    title:'My Portfolio Web',
+    title:'My Portfolio Web version 1.0',
     text:'This is the site that shows all i have archived so far'
   },
   {
