@@ -24,15 +24,15 @@ const Content = () => {
                   <span></span>
                 </div>
           {/*this is where the gradient ends*/}
-          <div className="content-container">
+          <div className="landing__content-container">
           {/*this is where the text container starts*/}
-                <div className="left-content">
-                    <div className="text">
+                <div className="landing__left-content">
+                    <div className="landing__text">
                     <h1> My portfolio web version 2.0</h1>
                     <p>
                     A MERN aplication with an amazing dashboard and a tutorial section to help perpare for job coding chanlange.
                     </p>
-                      <div className="button-area">
+                      <div className="landing__button-area">
                         <Link to="/"> Contact </Link>
 
                         <SecondaryButton  name={"Dashbourd"}/>
@@ -43,7 +43,7 @@ const Content = () => {
           {/*this is where the text container ends*/}
 
           {/*image container showing dashboard starts*/}
-                <div className="right-content">
+                <div className="landing__right-content">
                     <div className="img-wrapper-tablet">
                       <img src={dashbourd} alt="" />
                     </div>

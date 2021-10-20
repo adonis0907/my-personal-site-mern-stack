@@ -44,7 +44,7 @@ html{
   scroll-padding-top:7rem;
   background: #eee;
 }
-section{
+.landing__features,.landing__products,.landing__products{
   padding: 2rem 9%;
 }
 .landing__heading{
@@ -139,7 +139,7 @@ section{
 }
 
 
-.text{
+.landing__text{
   position: relative;
   height:650px;
   display: flex;
@@ -150,7 +150,7 @@ section{
   max-width: 1024px;
 }
 
-.text h1{
+.landing__text h1{
   font-size:40px;
   opacity: 0;
   animation: fadein 1s;
@@ -158,7 +158,7 @@ section{
   animation-fill-mode: forwards;
 }
 
-.text p {
+.landing__text p {
   color:#d9fcff;
   font-size:20px;
   max-width: 70%;
@@ -201,7 +201,7 @@ section{
 
 
 
-.button-area{
+.landing__button-area{
   position: relative;
   display: flex;
   flex-direction: row;
@@ -211,7 +211,7 @@ section{
 }
 
 
-.button-area a{
+.landing__button-area a{
   background: #03e9f496;
   border-radius: 10px;
   padding: 1em 1.6em;
@@ -226,7 +226,7 @@ section{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transition: .5s;
 }
-.button-area a:hover{
+.landing__button-area a:hover{
   background-color: #233781;
 }
 .img-wrapper-tablet img{
@@ -261,13 +261,13 @@ section{
 
   }
 }
-.content-container{
+.landing__content-container{
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.left-content{
+.landing__left-content{
   padding-left: 9rem;
   /* margin-top: 0; */
 }
@@ -279,7 +279,7 @@ section{
   padding: 2rem;
 }
 @media screen and (max-width:1163px){
-  .content-container{
+  .landing__content-container{
     flex-direction: column; }
   .img-wrapper-tablet{
     top:498px;

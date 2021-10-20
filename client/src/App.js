@@ -5,6 +5,7 @@ import PrivateRoute from "./components/routing/PrivateRoute"
 import Portfolio from './components/screens/portfolio/Portfolio'
 // Screens
 import PrivateScreen from "./components/screens/Admin/PrivateScreen"
+import SuperAdmin from "./components/screens/Admin/SuperAdmin"
 import Resume from './components/screens/resume/Resume'
 import LoginScreen from "./components/screens/LoginScreen"
 import RegisterScreen from "./components/screens/RegisterScreen"
@@ -19,6 +20,8 @@ const App=()=> {
       <div className='App'>
         <Switch>
             <PrivateRoute exact path="/" component={PrivateScreen}/>
+            <PrivateRoute exact path="/superAdmin" component={SuperAdmin}/>
+
             <Route exact path="/login" component={LoginScreen}/>
             <Route exact path="/resume" component={Resume}/>
             <Route exact path="/portfolio" component={Portfolio}/>

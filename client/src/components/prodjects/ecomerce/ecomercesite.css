@@ -29,7 +29,7 @@ html{
   scroll-padding-top:7rem;
   background: #eee;
 }
-section{
+.ecom__review,.ecom__products,.ecom__content,.ecom__footer,.ecom__features,.ecom__categories,.ecom__blogs1{
   padding: 2rem 9%;
 }
 .ecom__box-container{
