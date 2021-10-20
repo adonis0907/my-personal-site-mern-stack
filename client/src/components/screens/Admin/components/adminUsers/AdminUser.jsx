@@ -117,19 +117,135 @@ const AdminUser = ({history}) => {
 
     <AdminSideBar />
     <div className="content-wrapper" style={{background: `url(${img1}) repeat fixed`}}>
-    <div className="userList">
-    <DataGrid
-      rows={data}
-      columns={columns}
-      pageSize={8}
-      checkboxSelection
-      disableSelectionOnClick
-    />
-    </div>
+    <div className="admin__details">
+      <div className="admin__recentOrder">
+        <div className="admin__cardHeader">
+          <h2>Recent Orders</h2>
+          <a href="#" className="admin__btn">View all</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Price</td>
+              <td>Payment</td>
+              <td>Status</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Star Refrigerator</td>
+              <td>$1200</td>
+              <td>Paid</td>
+              <td><span className="admin__status admin__delivered">Delivered</span></td>
+            </tr>
+            <tr>
+              <td>Window Coolers</td>
+              <td>$120</td>
+              <td>Due</td>
+              <td><span className="admin__status admin__pending">pending</span></td>
+            </tr>
+            <tr>
+              <td>Speakers</td>
+              <td>$600</td>
+              <td>Paid</td>
+              <td><span className="admin__status admin__return">Return</span></td>
+            </tr>
+            <tr>
+              <td>Hp Laptop</td>
+              <td>$6000</td>
+              <td>Due</td>
+              <td><span className="admin__status admin__inporgress">In Progress</span></td>
+            </tr>
 
+            <tr>
+              <td>Star Refrigerator</td>
+              <td>$1200</td>
+              <td>Paid</td>
+              <td><span className="admin__status admin__delivered">Delivered</span></td>
+            </tr>
+            <tr>
+              <td>Window Coolers</td>
+              <td>$120</td>
+              <td>Due</td>
+              <td><span className="admin__status admin__pending">pending</span></td>
+            </tr>
+            <tr>
+              <td>Speakers</td>
+              <td>$600</td>
+              <td>Paid</td>
+              <td><span className="admin__status admin__return">Return</span></td>
+            </tr>
+            <tr>
+              <td>Hp Laptop</td>
+              <td>$6000</td>
+              <td>Due</td>
+              <td><span className="admin__status admin__inporgress">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>Apple Watch</td>
+              <td>$600</td>
+              <td>paid</td>
+              <td><span className="admin__status admin__delivered">Delivered</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="admin__recentCustomers">
+      <div className="admin__cardHeader">
+        <h2>Recent Customers</h2>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>David<br/><span>Italy</span></h4></td>
+          </tr>
+
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Mohamad<br/><span>Cameroon</span></h4></td>
+          </tr>
+
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Amelia<br/><span>France</span></h4></td>
+          </tr>
+
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Olivia<br/><span>USA</span></h4></td>
+          </tr>
+
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Admit<br/><span>Japan</span></h4></td>
+          </tr>
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Ashraf<br/><span>India</span></h4></td>
+          </tr>
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Dian<br/><span>Malasia</span></h4></td>
+
+          </tr>
+          <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+            <td><h4>Amit<br/><span>India</span></h4></td>
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
+
+
+    </div>
     </div>
     <AdminFooter />
     </div>
+
     </>
   )
 }
