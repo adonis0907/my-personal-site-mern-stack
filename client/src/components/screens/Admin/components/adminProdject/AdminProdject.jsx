@@ -4,7 +4,9 @@ import axios from 'axios'
 import AdminHeader from '../adminHeader/AdminHeader'
 import AdminSideBar from '../adminSideBar/AdminSideBar'
 import AdminFooter from '../adminFooter/AdminFooter'
-import img1 from '../../../../images/boxed-bg.jpg'
+import img from '../../../../images/boxed-bg.jpg'
+import img1 from '../../../../images/portImages/netflix2.png'
+
 const AdminProdject = ({history}) => {
   const [error,setError] =useState("")
   const [privateData,setPrivateData]=useState("");
@@ -47,8 +49,117 @@ const AdminProdject = ({history}) => {
     <AdminHeader logoutHandler={logoutHandler} />
 
     <AdminSideBar />
-    <div className="content-wrapper" style={{background: `url(${img1}) repeat fixed`}}>
-    <div>Prodject</div>
+    <div className="content-wrapper" style={{background: `url(${img}) repeat fixed`}}>
+    <div className="admin__details">
+      <div className="admin__recentOrder">
+        <div className="admin__cardHeader">
+          <h2>Users Table</h2>
+          <form action="#" method="get" className="sidebar-form">
+            <div className="input-group">
+              <input type="text" name="q" className="form-control" placeholder="Search..."/>
+              <span className="input-group-btn">
+                <button type='submit' name='search' id='search-btn' className="btn btn-flat"><i className="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          <div>
+
+          <a href="#" className="admin__btn">New Prodject</a>
+          </div>
+
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>Image</td>
+              <td>Title</td>
+              <td>Description</td>
+              <td>References</td>
+              <td>Status</td>
+              <td>Contorls</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Star Refrigerator</td>
+              <td>Spain</td>
+              <td>Verified</td>
+              <td><span className="admin__status admin__delivered">Admin</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+            </tr>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Window Coolers</td>
+              <td>Cameroon</td>
+              <td>Pending</td>
+              <td><span className="admin__status admin__pending">pending</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Speakers</td>
+              <td>Nigeria</td>
+              <td>Pending</td>
+              <td><span className="admin__status admin__return">Super Admin</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Hp Laptop</td>
+              <td>Chad</td>
+              <td>Pending</td>
+              <td><span className="admin__status admin__inporgress">Normal User</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Star Refrigerator</td>
+              <td>Nigeria</td>
+              <td>Pending</td>
+              <td><span className="admin__status admin__delivered">Admin</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Window Coolers</td>
+              <td>$120</td>
+              <td>Verified</td>
+              <td><span className="admin__status admin__pending">pending</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Speakers</td>
+              <td>$600</td>
+              <td>Verified</td>
+              <td><span className="admin__status admin__return">Super Admin</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+            <tr>
+            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
+              <td>Hp Laptop</td>
+              <td>$6000</td>
+              <td>Verified</td>
+              <td><span className="admin__status admin__inporgress">Normal User</span></td>
+              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+    </div>
 
     </div>
     <AdminFooter />

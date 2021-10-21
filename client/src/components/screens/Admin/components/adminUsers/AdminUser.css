@@ -1,12 +1,12 @@
 
 .admin__details{
-  position: relative;
+  /* position: relative; */
   width: 100%;
   padding: 20px;
-  padding-top: 0;
-  display: grid;
+  /* padding-top: 0; */
+  /* display: grid;
   grid-gap: 20px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr; */
 }
 .admin__details .admin__recentOrder{
   position: relative;
@@ -32,6 +32,7 @@
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+  margin: 0 5px;
 }
 
 .admin__details table{
@@ -61,14 +62,25 @@
 .admin__details .admin__recentOrder table thead tr td:last-child,
 .admin__details .admin__recentOrder table tbody tr td:last-child
 {
-  text-align: right;
+  text-align: left;
+  padding-left: 20px;
 }
-
+.admin__recentOrder table tbody tr td i{
+  font-size: 20px;
+  margin: 0 6px;
+  cursor: pointer;
+}
+.admin__user-edit:hover{
+  color: #8de02c;
+}
+.admin__user-delete:hover{
+  color:#eb3f16;
+}
 .admin__details .admin__recentOrder table thead tr td:nth-child(2),
 .admin__details .admin__recentOrder table tbody tr td:nth-child(2)
 {
-  text-align: right;
-  padding-right: 20px;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .admin__details .admin__recentOrder table thead tr td:nth-child(3),
@@ -113,14 +125,14 @@
   width:60px;
 }
 
-.admin__details .admin__recentCustomers .admin__imgBox{
+ .admin__imgBox{
   position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
    overflow: hidden;
 }
-.admin__details .admin__recentCustomers .admin__imgBox img{
+ .admin__imgBox img{
   position: absolute;
   top:0;
   left: 0;
@@ -183,7 +195,7 @@ color:#fff;
   }
 }
 
-@media (max-width:480px){
+@media (max-width:595px){
   .admin__cardBox{
     grid-template-columns: repeat(1,1fr);
   }

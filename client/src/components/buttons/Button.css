@@ -11,7 +11,7 @@
 .button__container>button{
   outline:none;
   border:none;
-  background-color: var(--background-ligth-color-2);
+  background-color: #2337812b;
   padding:.4rem 2rem;
   box-shadow:none;
   font-size:inherit;
@@ -19,6 +19,7 @@
   cursor: pointer;
   transition: all .4s ease-in-out;
   margin-bottom: .6rem;
+  border-radius: 5px;
 
 }
 
@@ -28,6 +29,8 @@
 
 .button__container>button:hover{
   background-color: var(--primary-color);
+  color:#fff;
+  border-radius: 5px;
 }
 
 .button__container>button:active,.button__container>button:focus{
