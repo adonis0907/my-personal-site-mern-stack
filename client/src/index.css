@@ -10,7 +10,10 @@ body{
   background: #eee;
   color: #333;
 }
-
+.adminlink{
+  text-decoration: none;
+  color: inherit;
+}
 .error-message{
   width:100%;
   display: inline-block;

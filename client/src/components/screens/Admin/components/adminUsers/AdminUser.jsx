@@ -94,7 +94,7 @@ const AdminUser = ({history}) => {
               <td>Spain</td>
               <td>Verified</td>
               <td><span className="admin__status admin__delivered">Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
             </tr>
             <tr>
             <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
@@ -102,7 +102,7 @@ const AdminUser = ({history}) => {
               <td>Cameroon</td>
               <td>Pending</td>
               <td><span className="admin__status admin__pending">pending</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -111,7 +111,7 @@ const AdminUser = ({history}) => {
               <td>Nigeria</td>
               <td>Pending</td>
               <td><span className="admin__status admin__return">Super Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -120,7 +120,7 @@ const AdminUser = ({history}) => {
               <td>Chad</td>
               <td>Pending</td>
               <td><span className="admin__status admin__inporgress">Normal User</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
 
@@ -130,7 +130,7 @@ const AdminUser = ({history}) => {
               <td>Nigeria</td>
               <td>Pending</td>
               <td><span className="admin__status admin__delivered">Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -139,7 +139,7 @@ const AdminUser = ({history}) => {
               <td>$120</td>
               <td>Verified</td>
               <td><span className="admin__status admin__pending">pending</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -148,7 +148,7 @@ const AdminUser = ({history}) => {
               <td>$600</td>
               <td>Verified</td>
               <td><span className="admin__status admin__return">Super Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -157,7 +157,7 @@ const AdminUser = ({history}) => {
               <td>$6000</td>
               <td>Verified</td>
               <td><span className="admin__status admin__inporgress">Normal User</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditUser" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
           </tbody>

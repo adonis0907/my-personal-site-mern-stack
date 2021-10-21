@@ -7,6 +7,9 @@ import Portfolio from './components/screens/portfolio/Portfolio'
 import PrivateScreen from "./components/screens/Admin/PrivateScreen"
 import AdminUser from './components/screens/Admin/components/adminUsers/AdminUser'
 import AdminProdject from './components/screens/Admin/components/adminProdject/AdminProdject'
+import AdminNewProdject from './components/screens/Admin/components/adminProdject/adminNewProdject/AdminNewProdject'
+import AdminEditProdject from './components/screens/Admin/components/adminProdject/adminEditProdject/AdminEditProdject'
+import AdminEditUser from './components/screens/Admin/components/adminUsers/adminEditUser/AdminEditUser'
 import Resume from './components/screens/resume/Resume'
 import LoginScreen from "./components/screens/LoginScreen"
 import RegisterScreen from "./components/screens/RegisterScreen"
@@ -23,6 +26,10 @@ const App=()=> {
             <PrivateRoute exact path="/" component={PrivateScreen}/>
             <PrivateRoute exact path="/users" component={AdminUser}/>
             <PrivateRoute exact path="/prodjects" component={AdminProdject}/>
+            <PrivateRoute exact path="/adminNewProdject" component={AdminNewProdject}/>
+            <PrivateRoute exact path="/adminEditProdject" component={AdminEditProdject}/>
+            <PrivateRoute exact path="/adminEditUser" component={AdminEditUser}/>
+
 
             <Route exact path="/login" component={LoginScreen}/>
             <Route exact path="/resume" component={Resume}/>

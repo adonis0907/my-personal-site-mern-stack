@@ -6,6 +6,8 @@ import AdminSideBar from '../adminSideBar/AdminSideBar'
 import AdminFooter from '../adminFooter/AdminFooter'
 import img from '../../../../images/boxed-bg.jpg'
 import img1 from '../../../../images/portImages/netflix2.png'
+import {Link} from 'react-router-dom'
+
 
 const AdminProdject = ({history}) => {
   const [error,setError] =useState("")
@@ -53,7 +55,7 @@ const AdminProdject = ({history}) => {
     <div className="admin__details">
       <div className="admin__recentOrder">
         <div className="admin__cardHeader">
-          <h2>Users Table</h2>
+          <h2>Prodjects Table</h2>
           <form action="#" method="get" className="sidebar-form">
             <div className="input-group">
               <input type="text" name="q" className="form-control" placeholder="Search..."/>
@@ -64,7 +66,7 @@ const AdminProdject = ({history}) => {
           </form>
           <div>
 
-          <a href="#" className="admin__btn">New Prodject</a>
+          <Link to="/adminNewProdject" className="admin__btn">New Prodject</Link>
           </div>
 
         </div>
@@ -86,7 +88,7 @@ const AdminProdject = ({history}) => {
               <td>Spain</td>
               <td>Verified</td>
               <td><span className="admin__status admin__delivered">Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
             </tr>
             <tr>
             <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
@@ -94,7 +96,7 @@ const AdminProdject = ({history}) => {
               <td>Cameroon</td>
               <td>Pending</td>
               <td><span className="admin__status admin__pending">pending</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -103,7 +105,7 @@ const AdminProdject = ({history}) => {
               <td>Nigeria</td>
               <td>Pending</td>
               <td><span className="admin__status admin__return">Super Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -112,7 +114,7 @@ const AdminProdject = ({history}) => {
               <td>Chad</td>
               <td>Pending</td>
               <td><span className="admin__status admin__inporgress">Normal User</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
 
@@ -122,7 +124,7 @@ const AdminProdject = ({history}) => {
               <td>Nigeria</td>
               <td>Pending</td>
               <td><span className="admin__status admin__delivered">Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -131,7 +133,7 @@ const AdminProdject = ({history}) => {
               <td>$120</td>
               <td>Verified</td>
               <td><span className="admin__status admin__pending">pending</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -140,7 +142,7 @@ const AdminProdject = ({history}) => {
               <td>$600</td>
               <td>Verified</td>
               <td><span className="admin__status admin__return">Super Admin</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
             <tr>
@@ -149,7 +151,7 @@ const AdminProdject = ({history}) => {
               <td>$6000</td>
               <td>Verified</td>
               <td><span className="admin__status admin__inporgress">Normal User</span></td>
-              <td><div class="tools"><i class="fa fa-edit admin__user-edit"></i><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
 
             </tr>
           </tbody>
