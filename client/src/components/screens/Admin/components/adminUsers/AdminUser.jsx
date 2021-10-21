@@ -72,7 +72,7 @@ const AdminUser = ({history}) => {
           </form>
           <div>
 
-          <a href="#" className="admin__btn">New User</a>
+          <Link to="/adminNewUser" className="admin__btn">New User</Link>
           </div>
 
         </div>

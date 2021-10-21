@@ -5,8 +5,7 @@ import AdminHeader from '../../adminHeader/AdminHeader'
 import AdminSideBar from '../../adminSideBar/AdminSideBar'
 import AdminFooter from '../../adminFooter/AdminFooter'
 import img from '../../../../../images/boxed-bg.jpg'
-import img1 from '../../../../../images/portImages/netflix2.png'
-import {PermIdentity,Publish,CalendarToday,PhoneAndroid,MailOutline,LocationSearching} from "@material-ui/icons"
+import {Publish} from "@material-ui/icons"
 import {Link} from 'react-router-dom'
 
 
@@ -58,7 +57,7 @@ const AdminEditProdject = ({history}) => {
     <div className="adminProdject">
         <div className="adminProdjectTitleContainer">
         <h1 className="adminProdjectTitle">Edit Prodject</h1>
-        <Link to="/newUser">
+        <Link to="/adminNewProdject">
         <button className="adminProdjectAddButton">Create</button>
         </Link>
         </div>
@@ -72,34 +71,31 @@ const AdminEditProdject = ({history}) => {
               </div>
             </div>
             <div className="adminProdjectShowBottom">
-              <span className="adminProdjectShowTitle">Account Details</span>
+              <span className="adminProdjectShowTitle"><i class="fa  fa-building-o admin__user-edit"></i> Prodject Description</span>
               <div className="adminProdjectShowInfo">
-              <PermIdentity className="adminProdjectShowIcon" />
-              <span className="adminProdjectShowInfoTitle">suber911</span>
+
+              <p className="adminProdjectShowInfoTitle" >In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+              </div>
+
+              <span className="adminProdjectShowTitle"><i class="fa  fa-check-circle-o admin__user-edit"></i> Prodject Status</span>
+              <div className="adminProdjectShowInfo">
+
+              <p className="adminProdjectShowInfoTitle" >Complete</p>
+              </div>
+              <span className="adminProdjectShowTitle"><i class="fa  fa-tags admin__user-edit"></i> Prodject References</span>
+              <div className="adminProdjectShowInfo">
+
+              <p className="adminProdjectShowInfoTitle" >help.com</p>
+              </div>
+              <span className="adminProdjectShowTitle"><i class="fa  fa-users admin__user-edit"></i> Prodject Contributors</span>
+              <div className="adminProdjectShowInfo">
+
+              <p className="adminProdjectShowInfoTitle" >Mohamad Siysinyuy</p>
               </div>
 
 
 
-              <div className="adminProdjectShowInfo">
-              <CalendarToday className="adminProdjectShowIcon" />
-              <span className="adminProdjectShowInfoTitle">02-12-1994</span>
-              </div>
 
-              <span className="adminProdjectShowTitle">Contact Details</span>
-              <div className="adminProdjectShowInfo">
-              <PhoneAndroid className="adminProdjectShowIcon" />
-              <span className="adminProdjectShowInfoTitle">+237 653 255 47</span>
-              </div>
-
-              <div className="adminProdjectShowInfo">
-              <MailOutline className="adminProdjectShowIcon" />
-              <span className="adminProdjectShowInfoTitle">msiysinyuy@gmail.com</span>
-              </div>
-
-              <div className="adminProdjectShowInfo">
-              <LocationSearching className="adminProdjectShowIcon" />
-              <span className="adminProdjectShowInfoTitle">Buea | Cameroon</span>
-              </div>
             </div>
           </div>
           <div className="adminProdjectUpdate">
@@ -107,31 +103,31 @@ const AdminEditProdject = ({history}) => {
             <form  className="adminProdjectUpdateForm">
               <div className="adminProdjectUpdateLeft">
                 <div className="adminProdjectUpdateItem">
-                    <label>Username</label>
-                    <input type="text" placeholder="suber911" className="adminProdjectUpdateInput"/>
+                    <label>Title</label>
+                    <input type="text" placeholder="The Venus Prodject" className="adminProdjectUpdateInput"/>
                 </div>
 
                 <div className="adminProdjectUpdateItem">
-                    <label>Full Name</label>
+                    <label>Sub Title</label>
+                    <input type="text" placeholder="Save Mankind" className="adminProdjectUpdateInput"/>
+                </div>
+
+                <div className="adminProdjectUpdateItem">
+                    <label>Description</label>
+                    <input type="textarea" placeholder="This prodject is to save ...." className="adminProdjectUpdateInput"/>
+                </div>
+                <div className="adminProdjectUpdateItem">
+                    <label>Prodject Status</label>
+                    <input type="text" placeholder="Complete" className="adminProdjectUpdateInput"/>
+                </div>
+                <div className="adminProdjectUpdateItem">
+                    <label>References</label>
+                    <input type="text" placeholder="Help.com" className="adminProdjectUpdateInput"/>
+                </div>
+
+                <div className="adminProdjectUpdateItem">
+                    <label>Contributors</label>
                     <input type="text" placeholder="Mohamad Siysinyuy" className="adminProdjectUpdateInput"/>
-                </div>
-
-                <div className="adminProdjectUpdateItem">
-                    <label>Email</label>
-                    <input type="email" placeholder="msiysinyuy@gmail.com" className="adminProdjectUpdateInput"/>
-                </div>
-                <div className="adminProdjectUpdateItem">
-                    <label>Date of Birth</label>
-                    <input type="date" placeholder="02-12-1994" className="adminProdjectUpdateInput"/>
-                </div>
-                <div className="adminProdjectUpdateItem">
-                    <label>Phone</label>
-                    <input type="text" placeholder="+237 653 255 47" className="adminProdjectUpdateInput"/>
-                </div>
-
-                <div className="adminProdjectUpdateItem">
-                    <label>Address</label>
-                    <input type="usertext" placeholder="Buea | Cameroon" className="adminProdjectUpdateInput"/>
                 </div>
               </div>
               <div className="adminProdjectUpdateRight">

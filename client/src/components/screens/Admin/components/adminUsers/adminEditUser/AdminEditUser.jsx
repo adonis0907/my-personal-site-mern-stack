@@ -56,7 +56,7 @@ const AdminEditUser = ({history}) => {
     <div className="adminProdject">
         <div className="adminProdjectTitleContainer">
         <h1 className="adminProdjectTitle">Edit User</h1>
-        <Link to="/newUser">
+        <Link to="/adminNewUser">
         <button className="adminProdjectAddButton">Create</button>
         </Link>
         </div>
@@ -130,6 +130,13 @@ const AdminEditUser = ({history}) => {
                 <div className="adminProdjectUpdateItem">
                     <label>Address</label>
                     <input type="usertext" placeholder="Buea | Cameroon" className="adminProdjectUpdateInput"/>
+                </div>
+                <div className="newAdminUserItem">
+                  <label>Status</label>
+                  <select className="newAdminUserSelect" name="active" id="active">
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
+                  </select>
                 </div>
               </div>
               <div className="adminProdjectUpdateRight">

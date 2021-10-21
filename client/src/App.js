@@ -10,6 +10,7 @@ import AdminProdject from './components/screens/Admin/components/adminProdject/A
 import AdminNewProdject from './components/screens/Admin/components/adminProdject/adminNewProdject/AdminNewProdject'
 import AdminEditProdject from './components/screens/Admin/components/adminProdject/adminEditProdject/AdminEditProdject'
 import AdminEditUser from './components/screens/Admin/components/adminUsers/adminEditUser/AdminEditUser'
+import NewUser from './components/screens/Admin/components/adminUsers/newUser/NewUser'
 import Resume from './components/screens/resume/Resume'
 import LoginScreen from "./components/screens/LoginScreen"
 import RegisterScreen from "./components/screens/RegisterScreen"
@@ -29,6 +30,7 @@ const App=()=> {
             <PrivateRoute exact path="/adminNewProdject" component={AdminNewProdject}/>
             <PrivateRoute exact path="/adminEditProdject" component={AdminEditProdject}/>
             <PrivateRoute exact path="/adminEditUser" component={AdminEditUser}/>
+            <PrivateRoute exact path="/adminNewUser" component={NewUser}/>
 
 
             <Route exact path="/login" component={LoginScreen}/>
