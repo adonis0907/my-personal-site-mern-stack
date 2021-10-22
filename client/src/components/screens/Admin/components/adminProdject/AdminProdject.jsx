@@ -12,6 +12,12 @@ import {Link} from 'react-router-dom'
 const AdminProdject = ({history}) => {
   const [error,setError] =useState("")
   const [privateData,setPrivateData]=useState("");
+  const [lists,setLists]=useState([])
+  const [error2,setError2] =useState("")
+
+
+
+
 
   useEffect(()=>{
     if(!localStorage.getItem("authToken")){
@@ -25,7 +31,7 @@ const AdminProdject = ({history}) => {
         }
       }
       try{
-        const {data} = await axios.get("/api/private",config)
+        const {data} = await axios.get("/api/private/getallprodject",config)
 
         setPrivateData(data.data)
 
@@ -42,6 +48,10 @@ const AdminProdject = ({history}) => {
   const logoutHandler=()=>{
     localStorage.removeItem("authToken")
     history.push("/login")
+  }
+
+  if(privateData.length===0){
+    return("loading ...")
   }
   return (
     error? <span className="error-message">{error}</span>
@@ -82,78 +92,18 @@ const AdminProdject = ({history}) => {
             </tr>
           </thead>
           <tbody>
+          {privateData.map((prodject,index)=>(
             <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Star Refrigerator</td>
-              <td>Spain</td>
-              <td>Verified</td>
-              <td><span className="admin__status admin__delivered">Admin</span></td>
+            <td className="admin__td"><div className="admin__imgBox"><img src={`http://localhost:5000/${prodject.filePath}`} alt="user" /></div></td>
+              <td>{prodject.title}</td>
+              <td>{prodject.desc}</td>
+              <td>{prodject.references}</td>
+              <td><span className="admin__status admin__delivered">{prodject.status}</span></td>
               <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
             </tr>
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Window Coolers</td>
-              <td>Cameroon</td>
-              <td>Pending</td>
-              <td><span className="admin__status admin__pending">pending</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+          ))}
 
-            </tr>
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Speakers</td>
-              <td>Nigeria</td>
-              <td>Pending</td>
-              <td><span className="admin__status admin__return">Super Admin</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
-
-            </tr>
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Hp Laptop</td>
-              <td>Chad</td>
-              <td>Pending</td>
-              <td><span className="admin__status admin__inporgress">Normal User</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
-
-            </tr>
-
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Star Refrigerator</td>
-              <td>Nigeria</td>
-              <td>Pending</td>
-              <td><span className="admin__status admin__delivered">Admin</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
-
-            </tr>
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Window Coolers</td>
-              <td>$120</td>
-              <td>Verified</td>
-              <td><span className="admin__status admin__pending">pending</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
-
-            </tr>
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Speakers</td>
-              <td>$600</td>
-              <td>Verified</td>
-              <td><span className="admin__status admin__return">Super Admin</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
-
-            </tr>
-            <tr>
-            <td className="admin__td"><div className="admin__imgBox"><img src={img1} alt="user" /></div></td>
-              <td>Hp Laptop</td>
-              <td>$6000</td>
-              <td>Verified</td>
-              <td><span className="admin__status admin__inporgress">Normal User</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
-
-            </tr>
+            
           </tbody>
         </table>
       </div>

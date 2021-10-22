@@ -127,7 +127,7 @@ exports.getUserStatistics= async (req,res,next)=>{
 //management of prodjects
 //create Prodject
 exports.createNewProdject = async (req,res,next) =>{
-  console.log(req.body)
+
   try{
     const prodject = new Prodject({
       title:req.body.title,
@@ -137,6 +137,9 @@ exports.createNewProdject = async (req,res,next) =>{
       references:req.body.references,
       contributors:req.body.contributors,
       active:req.body.active,
+      category:req.body.category,
+      githubLink:req.body.githubLink,
+      siteLink:req.body.siteLink,
       fileName:req.file.originalname,
       filePath:req.file.path,
       fileType:req.file.mimetype,

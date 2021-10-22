@@ -19,7 +19,7 @@ margin:2rem;
 }
 
 .landing__product-box img{
-    height: 20rem;
+    width: 100%;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
 }

@@ -10,8 +10,43 @@ import feature2 from './../images/intelligence.svg'
 import feature3 from './../images/game-dev.svg'
 import product1 from "./../images/blogs/blog1.svg"
 import {Link} from 'react-router-dom'
+import {useState,useEffect} from 'react'
+import axios from 'axios'
 
 const Content = () => {
+  const [lists,setLists]=useState([])
+  const [error,setError] =useState("")
+
+
+  useEffect(()=>{
+    // if(!localStorage.getItem("authToken")){
+    //   history.push("/login")
+    // }
+    const fetchPrivateData = async () =>{
+      const config = {
+        headers:{
+          "Content-Type":"application/json"
+          // Authorization:`Bearer ${localStorage.getItem("authToken")}`
+        }
+      }
+      try{
+        // const {data} = await axios.get("/api/private",config)
+        const getallList = await axios.get("/api/private/getallprodject",config)
+        // const getallList = await axios.get(`/api/private/getalllists${type?"?type="+type:""}${genre ? "&genre="+genre:""}`,config)
+        setLists(getallList.data)
+
+      }catch(error){
+
+        localStorage.removeItem("authToken")
+        setError("You are not authorized please login")
+      }
+    }
+
+    fetchPrivateData()
+  },[])
+    if(lists.length===0){
+      return("loading ...")
+    }
   return (
     <main>
 
@@ -81,76 +116,19 @@ const Content = () => {
           <div className="landing__product-slider swiper">
 
               <div className="landing__product-wrapper">
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
+              {lists.data.map((prodject,index)=>(
+                <ProductItem
+                  title={prodject.title}
+                  text={prodject.desc}
+                  product={`http://localhost:5000/${prodject.filePath}`}
+                />
+              ))}
 
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
 
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
               </div>
               </div>
         </section>
-        <section className="landing__products" id="products">
-        <h1 className="landing__heading">On Going <span>prodjects</span> </h1>
-          <div className="landing__product-slider swiper">
 
-              <div className="landing__product-wrapper">
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
-              <ProductItem
-                title={"fresh orange"}
-                text={"this descripes what i prodject it is and how far i have gone with it if possible headlines"}
-
-                product={product1}
-              />
-              </div>
-              </div>
-        </section>
         <Blog />
         <Footer />
     </main>

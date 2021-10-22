@@ -31,7 +31,7 @@ router.post('/createnewprodject',upload.single('file'),protect,isAdmin,createNew
 router.route("/updateprodject/:prodjectId").put(protect,isAdmin,updateProdject)
 router.route("/deleteprodject/:prodjectId").delete(protect,isAdmin,deleteProdject)
 router.route("/getaprodject/:prodjectId").get(protect,getAProdject)
-router.route("/getallprodject").get(protect,getAllProdject)
+router.route("/getallprodject").get(getAllProdject)
 router.route("/getrandomprodject").get(protect,getRandomProdject)
 
 

@@ -9,6 +9,9 @@ const ProdjectSchema = new mongoose.Schema(
   references:{type:String},
   contributors:{type:String},
   active:{type:Boolean,default:true},
+  category:{type:String,required:true},
+  githubLink:{type:String,required:true,unique:true},
+  siteLink:{type:String,required:true,unique:true},
   fileName:{
     type:String,
     required:true
