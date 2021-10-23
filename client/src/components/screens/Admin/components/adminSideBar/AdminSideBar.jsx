@@ -35,8 +35,8 @@ const AdminSideBar = () => {
             </a>
             <ul className="treeview-menu">
               <li className="active"><Link to="/"><i className="fa fa-circle-o"></i> Dashboard</Link></li>
-              <li className="active"><Link to="/users"><i class="fa fa-users"></i> User tables</Link></li>
-              <li><Link to="/prodjects"><i class="fa fa-archive"></i> Prodject tables</Link></li>
+              <li className="active"><Link to="/users"><i className="fa fa-users"></i> User tables</Link></li>
+              <li><Link to="/prodjects"><i className="fa fa-archive"></i> Prodject tables</Link></li>
             </ul>
           </li>
           <li className="treeview">
@@ -45,8 +45,8 @@ const AdminSideBar = () => {
               <i className="fa fa-angle-left pull-right"></i>
             </a>
             <ul className="treeview-menu">
-              <li className="active"><Link to="/users"><i class="fa fa-users"></i> User tables</Link></li>
-              <li><Link to="/prodjects"><i class="fa fa-archive"></i> Prodject tables</Link></li>
+              <li className="active"><Link to="/users"><i className="fa fa-users"></i> User tables</Link></li>
+              <li><Link to="/prodjects"><i className="fa fa-archive"></i> Prodject tables</Link></li>
             </ul>
           </li>
 

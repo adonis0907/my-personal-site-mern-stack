@@ -2,11 +2,13 @@ import axios from 'axios'
 
 const apiUrl = "http://localhost:5000/api/private"
 
-export const singleFileUplaod = async (data,obtions)=>{
+export const singleFileUplaod = async (data,obtions,config)=>{
+
   try{
-    await axios.post(apiUrl +"singleFile",data ,obtions)
+    await axios.post(apiUrl +"createnewprodject",config,data ,obtions)
+    console.log("it was a sucess")
   }catch(error){
-    throw error
+    console.log(error)
   }
 }
 

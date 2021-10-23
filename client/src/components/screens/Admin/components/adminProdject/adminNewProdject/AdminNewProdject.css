@@ -21,7 +21,7 @@
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: rgb(151,150,150);
+  color: #464444;
 }
 .newAdminProdjectItem>input{
   height: 20px;
@@ -61,4 +61,8 @@
   cursor: pointer;
   border-radius: 10px;
   margin-top: 30px;
+}
+
+.Admincircularcontrol{
+  height: 100px;
 }

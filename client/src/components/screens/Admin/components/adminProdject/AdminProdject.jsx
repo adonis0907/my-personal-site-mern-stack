@@ -99,11 +99,11 @@ const AdminProdject = ({history}) => {
               <td>{prodject.desc}</td>
               <td>{prodject.references}</td>
               <td><span className="admin__status admin__delivered">{prodject.status}</span></td>
-              <td><div class="tools"><Link to="/adminEditProdject" className="adminlink"><i class="fa fa-edit admin__user-edit"></i></Link><i class="fa fa-trash-o admin__user-delete"></i></div></td>
+              <td><div className="tools"><Link to="/adminEditProdject" className="adminlink"><i className="fa fa-edit admin__user-edit"></i></Link><i className="fa fa-trash-o admin__user-delete"></i></div></td>
             </tr>
           ))}
 
-            
+
           </tbody>
         </table>
       </div>
