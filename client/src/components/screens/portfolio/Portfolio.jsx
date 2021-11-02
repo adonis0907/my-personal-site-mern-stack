@@ -48,11 +48,13 @@ const Portfolio = ({history}) => {
         }
       }
       try{
-        const {data} = await axios.get("/api/private/getallprodject",config)
 
-        setPrivateData(data.data)
-        const allButtons =['All',...new Set(privateData.map(item=>item.category))]
+
+        setPrivateData(portfolios)
+        setMenuItems(portfolios)
+        const allButtons =['All',...new Set(portfolios.map(item=>item.category))]
         setButton(allButtons)
+        const {data} = await axios.get("/api/private/getallprodject",config)
 
       }catch(error){
 
@@ -103,7 +105,7 @@ const Portfolio = ({history}) => {
     setMenuItems(filteredData)
   }
 
-  console.log(privateData)
+  console.log("this is private data",menuItem)
   return (
 
     <>

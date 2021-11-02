@@ -17,17 +17,17 @@ const PortfolioItem = ({data}) => {
     {
       data.map((item)=>{
         return<div className="main__portfolio-box" key={item.id}>
-            <img src={item.filePath} alt="img1" />
+            <img src={item.image} alt="img1" />
             <div className="main__portfolio-content">
               <div className="main__portfolio-icons">
-                  <Link to="/" className="link"><FontAwesomeIcon icon={ faUser }/> by user: {item.contributors}</Link>
+                  <Link to="/" className="link"><FontAwesomeIcon icon={ faUser }/> by user: Mohamad Siysinyuy</Link>
                   <Link to="/" className="link"><FontAwesomeIcon icon={ faCalendar }/> 1st may, 2021</Link>
               </div>
               <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <p>{item.text}</p>
               <div className="main__portfolio-btn-container">
-              <a href={item.githubLink} target="__blank" className="main__portfolio-btn link"><GitHub/>GitHub</a>
-              <a href={item.siteLink} target="__blank" className="main__portfolio-btn link"><LinkIcon/>Site</a>
+              <a href={item.link1} target="__blank" className="main__portfolio-btn link"><GitHub/>GitHub</a>
+              <a href={item.link2} target="__blank" className="main__portfolio-btn link"><LinkIcon/>Site</a>
               </div>
             </div>
             </div>
