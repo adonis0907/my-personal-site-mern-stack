@@ -1,11 +1,8 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
-import AdminHeader from '../adminHeader/AdminHeader'
-import AdminSideBar from '../adminSideBar/AdminSideBar'
-import AdminFooter from '../adminFooter/AdminFooter'
+import {Sidebar,Topbar} from "../../components"
 import img from '../../../../images/boxed-bg.jpg'
-import img1 from '../../../../images/portImages/netflix2.png'
 import {Link} from 'react-router-dom'
 
 
@@ -49,6 +46,16 @@ const AdminProdject = ({history}) => {
     localStorage.removeItem("authToken")
     history.push("/login")
   }
+  function toggleMenu(){
+    let toggle = document.querySelector('.admin__topbar')
+    let navigation = document.querySelector('.admin__navigation')
+    let main = document.querySelector('.admin__main')
+
+    toggle.classList.toggle('admin__active')
+    navigation.classList.toggle('admin__active')
+    main.classList.toggle('admin__active')
+
+  }
 
   if(privateData.length===0){
     return("loading ...")
@@ -57,11 +64,11 @@ const AdminProdject = ({history}) => {
     error? <span className="error-message">{error}</span>
     :
     <>
-    <div className="wrapper" >
-    <AdminHeader logoutHandler={logoutHandler} />
 
-    <AdminSideBar />
-    <div className="content-wrapper" style={{background: `url(${img}) repeat fixed`}}>
+
+    <Sidebar logoutHandler={logoutHandler}  />
+    <div className="admin__main">
+        <Topbar toggleMenu={toggleMenu} />
     <div className="admin__details">
       <div className="admin__recentOrder">
         <div className="admin__cardHeader">
@@ -114,8 +121,9 @@ const AdminProdject = ({history}) => {
     </div>
 
     </div>
-    <AdminFooter />
-    </div>
+
+
+
       </>
   )
 }

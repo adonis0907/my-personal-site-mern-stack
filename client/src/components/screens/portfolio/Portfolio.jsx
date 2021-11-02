@@ -1,13 +1,11 @@
 import React from 'react'
 import './Portfolio.css'
-import BlogItem from '../../blogs/blogItem/BlogItem'
 import PortfolioItem from './portfolioItem/PortfolioItem'
 
 import Button from '../../buttons/Button'
 import Header from '../../mainHeader/Header'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
-import img1 from '../../images/blogs/blog1.svg'
 import Footer from '../../footer/Footer'
 
 import portfolios from '../../data/protfolios'
@@ -17,22 +15,19 @@ const Portfolio = ({history}) => {
   const [password,setPassword]=useState('')
   const [error,setError]=useState('')
   const [isScrolled,setIsScrolled]=useState(true)
+  const [privateData,setPrivateData]=useState("");
 
-  const allButtons =['All',...new Set(portfolios.map(item=>item.category))]
 
-  // const allButtons =['All',...portfolios.map(item=>item.category)]
 
-    const [menuItem, setMenuItems] = useState(portfolios)
-    const [button, setButton] = useState(allButtons)
 
-    const filter =(button)=>{
-      if(button==='All'){
-        setMenuItems(portfolios)
-        return
-      }
-      const filteredData = portfolios.filter(item => item.category===button);
-      setMenuItems(filteredData)
-    }
+
+    const [menuItem, setMenuItems] = useState([])
+    const [button, setButton] = useState([])
+
+
+
+
+
   window.onscroll =()=>{
     setIsScrolled(window.pageYOffset===0?false:true)
     return ()=>(window.onscroll=null);
@@ -43,6 +38,30 @@ const Portfolio = ({history}) => {
     if(localStorage.getItem("authToken")){
       history.push("/")
     }
+
+
+    const fetchPrivateData = async () =>{
+      const config = {
+        headers:{
+          "Content-Type":"application/json",
+          Authorization:`Bearer ${localStorage.getItem("authToken")}`
+        }
+      }
+      try{
+        const {data} = await axios.get("/api/private/getallprodject",config)
+
+        setPrivateData(data.data)
+        const allButtons =['All',...new Set(privateData.map(item=>item.category))]
+        setButton(allButtons)
+
+      }catch(error){
+
+        localStorage.removeItem("authToken")
+        setError("You are not authorized please login")
+      }
+    }
+
+    fetchPrivateData()
   },[history])
 
 
@@ -71,25 +90,20 @@ const Portfolio = ({history}) => {
 
 
 
-  window.onscroll=()=>{
-    // let landing__cardForm=document.querySelector('.landing__shopping-card');
-    // let landing__cardForm2=document.querySelector('.landing__login-from');
-    // let landing__navbar=document.querySelector('.landing__navbar');
-    // let landing__searchForm=document.querySelector('.landing__search-form');
-
-    // if( landing__searchForm.classList[1]==='landing__active'){
-    //   landing__searchForm.classList.remove('landing__active')
-    // }
-    // if( landing__navbar.classList[1]==='landing__active'){
-    //   landing__navbar.classList.remove('landing__active')
-    // }
-    // if( landing__cardForm.classList[1]==='landing__active'){
-    //   landing__cardForm.classList.remove('landing__active')
-    // }
-    // if( landing__cardForm2.classList[1]==='landing__active'){
-    //   landing__cardForm2.classList.remove('landing__active')
-    // }
+  if(privateData.length===0){
+    return("loading ...")
   }
+
+  const filter =(button)=>{
+    if(button==='All'){
+      setMenuItems(privateData)
+      return
+    }
+    const filteredData = privateData.filter(item => item.category===button);
+    setMenuItems(filteredData)
+  }
+
+  console.log(privateData)
   return (
 
     <>

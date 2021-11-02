@@ -7,7 +7,7 @@ import AdminFooter from '../../adminFooter/AdminFooter'
 import img from '../../../../../images/boxed-bg.jpg'
 import {Publish} from "@material-ui/icons"
 import {Link} from 'react-router-dom'
-
+import {Sidebar,Topbar} from "../../../components"
 
 import './AdminEditProdject.css'
 const AdminEditProdject = ({history}) => {
@@ -44,16 +44,24 @@ const AdminEditProdject = ({history}) => {
     localStorage.removeItem("authToken")
     history.push("/login")
   }
+  function toggleMenu(){
+    let toggle = document.querySelector('.admin__topbar')
+    let navigation = document.querySelector('.admin__navigation')
+    let main = document.querySelector('.admin__main')
+
+    toggle.classList.toggle('admin__active')
+    navigation.classList.toggle('admin__active')
+    main.classList.toggle('admin__active')
+
+  }
   return (
     error? <span className="error-message">{error}</span>
     :
     <>
-    <div className="wrapper" >
-    <AdminHeader logoutHandler={logoutHandler} />
-
-    <AdminSideBar />
-    <div className="content-wrapper" style={{background: `url(${img}) repeat fixed`}}>
-
+    <Sidebar logoutHandler={logoutHandler} />
+    
+    <div className="admin__main">
+        <Topbar toggleMenu={toggleMenu} />
     <div className="adminProdject">
         <div className="adminProdjectTitleContainer">
         <h1 className="adminProdjectTitle">Edit Prodject</h1>
@@ -143,8 +151,7 @@ const AdminEditProdject = ({history}) => {
         </div>
     </div>
     </div>
-    <AdminFooter />
-    </div>
+
       </>
   )
 }

@@ -1,15 +1,283 @@
-:root{
-  --admin-box-shadow: 0 0 8px rgb(0 0 0 / 50%);
-    --admin-box-shadow-hover: 0 0 8px rgb(0 0 0 / 70%);
+/* .home{
+  flex: 4;
 }
-.track-visitors{
-  padding:0 3px;
+.homeWidgets{
+  display: flex;
+  margin: 20px;
 }
 
-.admin__box__shadow{
-  box-shadow: var(--admin-box-shadow);
-  transition: 4s;
+.home__container{
+  display: flex;
+  margin-top: 10px;
+} */
+
+
+
+
+.admin__main{
+
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  background: #f5f5f5;
+  min-height: 100vh;
+  transition: 0.5s
 }
-.admin__box__shadow:hover{
-  box-shadow: var(--admin-box-shadow-hover);
+
+.admin__main.admin__active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
+
+
+.admin__cardBox{
+  position: relative;
+  width: 100%;
+  padding:20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+}
+.admin__cardBox .admin__card{
+  position: relative;
+  /* width: 100%; */
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+.admin__cardBox .admin__card .admin__numbers{
+
+  position: relative;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.admin__cardBox .admin__card .admin__cardName{
+  color: #999;
+
+}
+.admin__cardBox .admin__card .admin__iconBox{
+  font-size: 2.5em;
+  color: #03a9f4;
+}
+
+.admin__details{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 1fr;
+}
+.admin__details .admin__recentOrder{
+  position: relative;
+
+  min-height: 530px;
+  background: #fff;
+  padding: 20px;
+}
+.admin__cardHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.admin__cardHeader h2{
+  font-weight: 600;
+
+}
+
+.admin__btn{
+  position: relative;
+  padding: 5px 10px;
+  background: #03a9f4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.admin__details table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.admin__details table thead td{
+  font-weight: 600;
+}
+
+.admin__details .admin__recentOrder table tr{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.admin__details .admin__recentOrder table tbody tr:last-child{
+  border-bottom: none;
+}
+.admin__details .admin__recentOrder table tbody tr:hover{
+  background: #03a9f4;
+  color: #fff;
+}
+
+.admin__details .admin__recentOrder table tr td{
+  padding: 9px 5px;
+}
+.admin__details .admin__recentOrder table thead tr td:last-child,
+.admin__details .admin__recentOrder table tbody tr td:last-child
+{
+  text-align: right;
+}
+
+.admin__details .admin__recentOrder table thead tr td:nth-child(2),
+.admin__details .admin__recentOrder table tbody tr td:nth-child(2)
+{
+  text-align: right;
+  padding-right: 20px;
+}
+
+.admin__details .admin__recentOrder table thead tr td:nth-child(3),
+.admin__details .admin__recentOrder table tbody tr td:nth-child(3)
+{
+  text-align: center;
+
+}
+
+.admin__status{
+  position: relative;
+  padding: 2px 4px;
+  background: #fff;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.admin__delivered{
+  background: #8de02c;
+}
+.admin__pending{
+  background: #f9ca3f;
+}
+.admin__return{
+  background: #f00;
+}
+.admin__inporgress{
+  background: #1795ce;
+}
+
+.admin__details .admin__recentCustomers{
+  position: relative;
+
+  min-height: 530px;
+  background: #fff;
+  padding: 20px;
+
+}
+.admin__td{
+  width:60px;
+}
+
+.admin__details .admin__recentCustomers .admin__imgBox{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+   overflow: hidden;
+}
+.admin__details .admin__recentCustomers .admin__imgBox img{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin__details .admin__recentCustomers table tr td h4 span{
+  font-size: 12px;
+  color: #995;
+}
+
+.admin__details .admin__recentCustomers table tr:hover,
+.admin__details .admin__recentCustomers table tr:hover td h4 span
+{
+background: #03a9f4;
+color:#fff;
+
+}
+.admin__details .admin__recentCustomers table tr td{
+  padding: 7px 10px;
+}
+.admin__details .admin__recentCustomers table tr td h4{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+/* making it resposive */
+@media (max-width:992px){
+  .admin__navigation{
+    left:-300px;
+  }
+  .admin__navigation.admin__active{
+    left:0;
+    width: 300px;
+  }
+  .admin__main{
+    width: 100%;
+    left: 0;
+  }
+  .admin__main.admin__active{
+    width: calc(100%-300px);
+    left: 300px;
+  }
+
+  .admin__cardBox{
+  grid-template-columns: repeat(2,1fr);
+
+  }
+}
+
+@media (max-width:768px){
+  .admin__details{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .admin__cardHeader h2{
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+@media (max-width:480px){
+  .admin__cardBox{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .admin__details .admin__recentOrder{
+    overflow-x: auto;
+  }
+  .admin__details .admin__recentOrder table{
+    width: 600px;
+
+  }
+  .admin__navigation{
+    width: 100%;
+
+    left:-100%;
+      z-index: 1000;
+  }
+  .admin__navigation.admin__active{
+    width: 100%;
+    left: 0;
+
+  }
+
+
+    .admin__main,
+    .admin__main.admin__active{
+      width: 100%;
+      left: 0;
+    }
 }

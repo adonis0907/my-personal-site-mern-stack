@@ -3,7 +3,7 @@ const SingleFile = require('../models/singlefile')
 const MultipleFile = require('../models/multiplefile')
 
 const singleFileUpload = async (req,res,next) =>{
-    
+
   try{
 
     const file = new SingleFile({

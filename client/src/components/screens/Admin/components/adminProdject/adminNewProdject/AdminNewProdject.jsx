@@ -1,15 +1,15 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
-import AdminHeader from '../../adminHeader/AdminHeader'
-import AdminSideBar from '../../adminSideBar/AdminSideBar'
-import AdminFooter from '../../adminFooter/AdminFooter'
-import img from '../../../../../images/boxed-bg.jpg'
+import {Cancel} from "@material-ui/icons"
+
+import img from '../../../../../images/portImages/img1.png'
 import {Publish} from "@material-ui/icons"
 import {CircularProgressbar,buildStyles} from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import {singleFileUplaod} from '../../../../../data/api'
 import './AdminNewProdject.css'
+import {Sidebar,Topbar} from "../../../components"
 
 const AdminNewProdject = ({history}) => {
   const [error,setError] =useState("")
@@ -23,7 +23,7 @@ const AdminNewProdject = ({history}) => {
   const [category,setCategory] =useState("")
   const [githubLink,setGithubLink] =useState("")
   const [siteLink,setSiteLink] =useState("")
-  const [file,setFile] =useState("")
+  const [file,setFile] =useState(null)
   const [singleProgress,setSingleProgress] =useState("")
 
   const singleFileObtions ={
@@ -55,10 +55,6 @@ const AdminNewProdject = ({history}) => {
     formData.append('siteLink',siteLink)
     formData.append('file',file)
     console.log("this is form data",formData)
-//     for(var pair of formData.entries()) {
-//    console.log(pair[0]+ ', '+ pair[1]);
-// }
-    // console.log("form data is ", {title,subTitle,desc,status,references,contributors,category,githubLink,siteLink,formData})
     const config = {
       headers:{
         "Content-Type":"application/json",
@@ -66,13 +62,25 @@ const AdminNewProdject = ({history}) => {
       }
     }
 
-    // try{
-    //  await axios.post("/api/private/createnewprodject",formData,config);
-    //
-    // }catch(error){
-    //   console.log(error)
-    // }
-    await singleFileUplaod(formData,config,singleFileObtions)
+    try{
+
+     const res = await axios.post("/api/private/createnewprodject",formData,config,singleFileObtions);
+     setFile(null)
+     setSiteLink("")
+     setGithubLink("")
+     setCategory("")
+     setContributors("")
+     setReferences("")
+     setStatus("")
+     setDesc("")
+     setSubTitle("")
+     setTitle("")
+
+      console.log("this is res", res)
+    }catch(error){
+      console.log(error)
+    }
+    // await singleFileUplaod(formData,config,singleFileObtions)
 
       // console.log(singleFile)
   }
@@ -107,15 +115,25 @@ const AdminNewProdject = ({history}) => {
     localStorage.removeItem("authToken")
     history.push("/login")
   }
+  function toggleMenu(){
+    let toggle = document.querySelector('.admin__topbar')
+    let navigation = document.querySelector('.admin__navigation')
+    let main = document.querySelector('.admin__main')
+
+    toggle.classList.toggle('admin__active')
+    navigation.classList.toggle('admin__active')
+    main.classList.toggle('admin__active')
+
+  }
   return (
     error? <span className="error-message">{error}</span>
     :
     <>
-    <div className="wrapper" >
-    <AdminHeader logoutHandler={logoutHandler} />
 
-    <AdminSideBar />
-    <div className="content-wrapper" style={{background: `url(${img}) repeat fixed`}}>
+    <Sidebar logoutHandler={logoutHandler} />
+
+    <div className="admin__main">
+        <Topbar toggleMenu={toggleMenu} />
     <div className="newAdminProdject">
       <h1 className="newAdminProdjectTitle">New AdminProdject</h1>
       <form className="newAdminProdjectForm" onSubmit={uploadSingleFile} encType="multipart/form-data">
@@ -167,7 +185,13 @@ const AdminNewProdject = ({history}) => {
 
 
             <div className = "adminProdjectUpdateUpload">
-              <img className="adminProdjectUpdateImg" src="https://i.pinimg.com/originals/af/1c/c3/af1cc3fa780eddc7c91a70f9e836b12c.jpg" alt=""/>
+              {file?(
+                <>
+                <img className="adminProdjectUpdateImg" src={URL.createObjectURL(file)} alt=""/>
+              <Cancel className="social__shareCancelImg" onClick={()=>setFile(null)}/>
+                </>
+              ):(<img className="adminProdjectUpdateImg" src={img} alt=""/>
+)}
               <label htmlFor="file"><Publish className="adminProdjectUpdateIcon"/></label>
               <input type="file" id="file" style={{display:"none"}} onChange={(e)=>singleFileChange(e)}/>
             </div>
@@ -194,8 +218,9 @@ const AdminNewProdject = ({history}) => {
       </form>
     </div>
     </div>
-    <AdminFooter />
-    </div>
+
+
+
       </>
   )
 }

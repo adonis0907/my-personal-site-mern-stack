@@ -3,6 +3,7 @@ const express = require('express')
 const connectDB = require('./config/db')
 const errorHandler = require('./middleware/error')
 const path = require('path')
+const multer = require("multer")
 
 
 
@@ -25,7 +26,36 @@ const bodyParser=require('body-parser')
 app.use(cors())
 app.use(bodyParser.json())
 app.use('/uploads',express.static(path.join(__dirname,'uploads')))
-app.use('/api/upload',require('./routes/file-upload-routes'))
+const fileSizeFormatter= (bytes,decimal) =>{
+  if(bytes===0){
+    return '0 Bytes'
+  }
+  const dm = decimal || 2
+  const sizes = ['Bytes','KB','MB','GB','TB','PB','EB','YB','ZB']
+  const index= Math.floor(Math.log(bytes)/Math.log(1000));
+  return parseFloat((bytes / Math.pow(1000,index)).toFixed(dm)) + ' ' + sizes[index];
+}
+let name ={}
+const storage = multer.diskStorage({
+  destination:(req,file,cb)=>{
+    cb(null,"public/prodjects")
+  },
+  filename:(req,file,cb)=>{
+     name=Date.now()+file.originalname,
+     // name.filePath=file.path,
+     // name.fileType=file.mimetype,
+     // name.fileSize=fileSizeFormatter(file.size,2)
+
+    cb(null,name)
+  }
+})
+const upload = multer({storage});
+app.use('/api/upload',upload.single("file"),(req,res)=>{
+
+  try{
+    return res.status(200).json(name)
+  }catch(err){console.log(err)}
+})
 // end file upload
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/private',require('./routes/private'))

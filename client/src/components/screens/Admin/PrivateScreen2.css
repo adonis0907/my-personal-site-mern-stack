@@ -1,0 +1,15 @@
+:root{
+  --admin-box-shadow: 0 0 8px rgb(0 0 0 / 50%);
+    --admin-box-shadow-hover: 0 0 8px rgb(0 0 0 / 70%);
+}
+.track-visitors{
+  padding:0 3px;
+}
+
+.admin__box__shadow{
+  box-shadow: var(--admin-box-shadow);
+  transition: 4s;
+}
+.admin__box__shadow:hover{
+  box-shadow: var(--admin-box-shadow-hover);
+}
